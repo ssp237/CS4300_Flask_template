@@ -1,0 +1,194 @@
+{
+       "Yes to Avocado Fragrance-Free Daily Cream Cleanser": {
+              "price": 8.99,
+              "link": "https://www.beautypedia.com/products/Yes-to-Avocado-Fragrance-Free-Daily-Cream-Cleanser/?archive_search=%2Fskin-care%2F",
+              "num faves": 7,
+              "brand": "Yes To",
+              "claims": "Intended for daily-use, this creamy cleanser creates a milky lather that purges dirt, oil and other impurities. Formulated with deep hydrating Hyaluronic Acid and Avocado Oil that is rich in Omega-3 fatty acids and antioxidant Vitamins C and E.",
+              "ingredients": "Water (Aqua), Dicaprylyl Ether, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Glycerin, Cetyl Palmitate, Glyceryl Stearate, Persea Gratissima (Avocado) Oil, Sodium Stearoyl Glutamate, Decyl Glucoside, Xanthan Gum, Sodium Hyaluronate, Sodium Phytate, Citric Acid, Phenoxyethanol, Ethylhexylglycerin."
+       },
+       "Yes to Avocado Fragrance-Free Daily Eye Cream": {
+              "price": 9.99,
+              "link": "https://www.beautypedia.com/products/Yes-to-Avocado-Fragrance-Free-Daily-Eye-Cream/?archive_search=%2Fskin-care%2F",
+              "num faves": 13,
+              "brand": "Yes To",
+              "claims": "Formulated with skin-plumping hyaluronic acid, this fragrance-free daily eye cream hydrates the skin around your eyes, helps smooth fine lines and stands up to bags and circles. This light non-greasy eye cream contains star ingredients such as shea butter, jojoba oil, coconut oil, sweet almond oil, and of course, avocado oil.",
+              "ingredients": "Water (Aqua), Olea Europaea (Olive) Fruit Oil, Helianthus Annuus (Sunflower) Seed Oil, Butyrospermum Parkii (Shea) Butter, Glycerin, Glyceryl Stearate SE, Propanediol, Cocos Nucifera (Coconut) Oil, Cetearyl Alcohol, Methyl Glucose Sesquistearate, Simmondsia Chinensis (Jojoba) Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Persea Gratissima (Avocado) Oil, Hyaluronic Acid, Candelilla/Jojoba/Rice Bran Polyglyceryl-3 Esters, Beeswax, Caffeine, Evodia Rutaecarpa Fruit Extract, Glycine Soja (Soybean) Oil, Sodium Stearoyl Lactylate, Glyceryl Stearate, Xanthan Gum, Citric Acid, Sodium Benzoate, Potassium Sorbate."
+       },
+       "Omega+ Complex Cleansing Balm": {
+              "price": 28.0,
+              "link": "https://www.beautypedia.com/products/Omega+-Complex-Cleansing-Balm/?archive_search=%2Fskin-care%2F",
+              "num faves": 7,
+              "brand": "Paula's Choice Skincare",
+              "claims": "This fragrance-free formulation contains a barrier-repairing complex of fatty acids that condition skin while preventing moisture loss during cleansing. These softening, naturally emollient ingredients clean without feeling greasy and rinse easily with water. ",
+              "ingredients": "Ethylhexyl Palmitate (emollient solvent), Caprylic/Capric Triglyceride (skin-replenishing), PEG-20 Glyceryl Triisostearate (emollient cleansing agent), Diisooctyl Succinate (emollient), Olive Oil PEG-7 Esters (emollient cleansing agent/emulsifier), Trihydroxystearin (texture enhancer), Glyceryl Stearate (emulsifier), Limnanthes Alba (Meadowfoam) Seed Oil (non-fragrant antioxidant/skin-softening omega fatty acid), Simmondsia Chinensis (Jojoba) Seed Oil (non-fragrant antioxidant/skin-softening omega fatty acid), Hydrogenated Rapeseed Oil (non-fragrant antioxidant/skin-softening omega fatty acid), Tocopheryl Acetate (vitamin E/antioxidant)."
+       },
+       "Lipikar Wash AP+ Gentle Foaming Moisturizing Wash": {
+              "price": 14.99,
+              "link": "https://www.beautypedia.com/products/Lipikar-Wash-AP+-Gentle-Foaming-Moisturizing-Wash/?archive_search=%2Fskin-care%2F",
+              "num faves": 8,
+              "brand": "La Roche-Posay",
+              "claims": "Moisturizing body wash and face wash for extra dry, sensitive skin provides 24 hr hydration starting in the shower. This comforting foaming wash helps protect skin from the drying effects of water and leaves the skin clean, soft, and instantly soothed.",
+              "ingredients": "Water, Glycerin, Sodium Laureth Sulfate, PEG-200 Hydrogenated Glyceryl Palmate, Coco-Betaine, Polysorbate 20, Citric Acid, PEG-7 Glyceryl Cocoate, Niacinamide, Acrylates Copolymer, Butyrospermum Parkii Butter, Cocamide MEA, Disodium EDTA, Glycol Distearate, Mannose, Polyquaternium-11, Sodium Benzoate, Sodium Chloride, Sodium Hydroxide, Vitreoscilla Ferment."
+       },
+       "Mellow Milk Mist": {
+              "price": 8.0,
+              "link": "https://www.beautypedia.com/products/Mellow-Milk-Mist/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Fourth Ray Beauty",
+              "claims": "For when you need to just chillax. This milky mist is made with a blend of White Tea, Chamomlie, and Marshmallow Root for a soft and comforted complexion.",
+              "ingredients": "Water, Butylene Glycol, Glycerin, Propanediol, Polysorbate 20, Chamomilla Recutita (Matricaria) Flower Extract, Anthemis Nobilis Flower Extract, Camellia Sinensis Leaf Extract, Calendula Officinalis Flower Extract, Althaea Officinalis Root Extract, Avena Sativa (Oat) Kernel Extract, Lavandula Angustifolia (Lavender) Oil, Sodium Hyaluronate, Allantoin, Simmondsia Chinensis (Jojoba) Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Phospholipids, Caprylic/Capric Triglyceride, Quartz, Xanthan Gum, Magnesium Aluminum Silicate, Citric Acid, Sorbic Acid, Potassium Sorbate, Hexylene Glycol, Caprylyl Glycol, Phenoxyethanol, Red 4 (CI 14700), Yellow 5 (CI 19140)."
+       },
+       "Rose Glow + Get It Cooling & Brightening Eye Balm": {
+              "price": 30.0,
+              "link": "https://www.beautypedia.com/products/Rose-Glow-+-Get-It-Cooling-&-Brightening-Eye-Balm/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Tula Skincare",
+              "claims": "Our best-selling, hyaluronic acid Eye Balm, now with even more glow-enhancing ingredients. Instantly hydrates, cools & helps reduce the look of fine lines & wrinkles around the eyes. Made with the same ingredients you love in the original Eye Balm\u2014think: probiotics & superfoods like caffeine, aloe & watermelon\u2014plus the addition of rosewater & rosehip oil (known to be a plant-based retinol alternative). Delivers an instant pick-me-up so you look refreshed, feel energized & can glow & get it!",
+              "ingredients": "Aqua/Water/Eau, Propanediol, Aloe Barbadensis Leaf Juice, Sodium Stearate, Xylitol, Lactococcus Ferment Lysate, Synthetic Fluorphlogopite, Oleth-20, Glycerin, Citrullus Lanatus (Watermelon) Fruit Extract, Lens Esculenta (Lentil) Fruit Extract, Caffeine, Pyrus Malus (Apple) Fruit Extract, Lactic Acid, Hyaluronic Acid, Rosa Canina Fruit Oil, Rosa Centifolia Flower Water, Vaccinium Angustifolium (Blueberry) Fruit Extract, Sodium Lactate, Diheptyl Succinate, Sodium PCA, Menthone Glycerin Acetal, Menthyl Lactate, Capryloyl Glycerin/Sebacic Acid Copolymer, Xanthan Gum, Ethylhexylglycerin, Sodium Benzoate, Potassium Sorbate, Sodium Chloride, Citric Acid, Phenoxyethanol, Tocopherol, Yellow 5 (CI 19140), Carmine (CI 75470), Titanium Dioxide (CI 77891), Tin Oxide (CI 77861), Mica (CI 77019)."
+       },
+       "Glow + Get It Cooling & Brightening Eye Balm": {
+              "price": 28.0,
+              "link": "https://www.beautypedia.com/products/Glow-+-Get-It-Cooling-&-Brightening-Eye-Balm/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Tula Skincare",
+              "claims": "Provides a lit-from-within glow while hydrating, cooling plus helping to reduce the look of fine lines & wrinkles around the eyes. Delivers an instant pick-me-up so you look refreshed, feel energized & can glow & get it!",
+              "ingredients": "Aqua/Water/Eau, Propanediol, Aloe Barbadensis Leaf Juice, Sodium Stearate, Xylitol, Lactococcus Ferment Lysate, Synthetic Fluorphlogopite, Oleth-20, Glycerin, Caffeine, Citrullus Lanatus (Watermelon) Fruit Extract, Lens Esculenta (Lentil) Fruit Extract, Pyrus Malus (Apple) Fruit Extract, Hyaluronic Acid, Vaccinium Angustifolium (Blueberry) Fruit Extract) Lactic Acid, Tocopherol, Sodium PCA, Diphenyl Succinate, Menthone Glycerin Acetal, Menthyl Lactate, Capryloyl Glycerin/Sebacic Acid Copolymer, Xanthan Gum, Sodium Lactate, Tin Oxide, Sodium Chloride, Ethylhexylglycerin, Phenoxyethanol, Sodium Benzoate, Potassium Sorbate. May Contain: Titanium Dioxide (CI 77891), Blue 1 (CI 42090), Yellow 5 (CI 19140)."
+       },
+       "Glow Hour Brightening & Neutralizing Eye Balm": {
+              "price": 32.0,
+              "link": "https://www.beautypedia.com/products/Glow-Hour-Brightening-&-Neutralizing-Eye-Balm/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Tula Skincare",
+              "claims": "Treat the look of dark circles over time with this neutralizing & color correcting under-eye balm. Specially sized to fit in the small corners of the inner eye, this eye balm features grapefruit & algae to brighten the look of tired eyes plus lingonberry to protect from the damaging effects of pollution & blue light. Each swipe cools, hydrates, luminates with a golden peachy glow & transports you to the magical time of day that is glow hour.",
+              "ingredients": "Propanediol, Aqua/Water/Eau, Aloe Barbadensis Leaf Juice, Mica, Sodium Stearate, Xylitol, Lactococcus Ferment Lysate, Trehalose, Oleth-20, Glycerin, Citrullus Lanatus (Watermelon) Fruit Extract, Lens Exculenta (Lentil) Fruit Extract, Caffeine, Pyrus Malus (Apple) Fruit Extract, Vaccinium Vitis-Idaea Fruit Extract, Cocos Nucifera (Coconut) Water, Fucus Vesiculosus Extract, Lactic Acid, Hyaluronic Acid, Gluconolactone, Citrus Grandis (Grapefruit) Seed Extract, Psidium Guajava Leaf Extract, Vaccinium Angustifolium (Blueberry) Fruit Extract, Capryloyl Glycerin/Sebacic Acid Copolymer, Tocopherol, Calcium Gluconate, Sclerotium Gum, Menthone Glycerin Acetal, Menthyl Lactate, Ethylhexylglycerin, Sodium PCA, Xanthan Gum, Hexylene Glycol, Citric Acid, Caprylyl Glycol, Sodium Lactate, Sodium Benzoate, Sodium Chloride, Phenoxyethanol, Diheptyl Succinate, Potassium Sorbate, Yellow 5 (CI 19140), Red 40 (CI 16035), Titanium Dioxide (CI 77891), Tin Oxide (CI 77861) ."
+       },
+       "Raydiate Vitamin C Serum": {
+              "price": 16.0,
+              "link": "https://www.beautypedia.com/products/Raydiate-Vitamin-C-Serum/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Fourth Ray Beauty",
+              "claims": "Raydiate Vitamin C Serum is a specially designed bi-phase serum + oil that is powerfully formulated to enhance skin radiance for a brighter, more luminous complexion.",
+              "ingredients": "Water, Caprylic/Capric Triglyceride, Glycerin, Propanediol, Pentylene Glycol, Tetrahexyldecyl Ascorbate, 3-0-Ethyl Ascorbic Acid, Sodium Hyaluronate, Curcuma Longa (Turmeric) Root Oil, Myrciaria Dubia Fruit Extract, Citrus Paradisi (Grapefruit) Fruit Extract, Citrus Aurantium Dulcis (Orange) Peel Extract, Argania Spinosa Kernel Oil, Oryza Sativa (Rice) Bran Extract, Rosa Canina Fruit Oil, Vitis Vinifera (Grape) Fruit Extract, Simmondsia Chinensis (Jojoba) Seed Oil, Moringa Oleifera Seed Oil, Helianthus Annuus (Sunflower) Extract, Mauritia Flexuosa Fruit Oil, Jasminum Officinale (Jasmine) Flower/Leaf Extract, Lavandula Angustifolia (Lavender) Flower/Leaf/Stem Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Eugenia Caryophyllus (Clove) Flower Extract, Schinus Molle Extract, Tocopherol, Sodium Chloride, Gluconolactone, 5-Lactone, Citric Acid, Potassium Sorbate, Sodium Benzoate, Caprylyl Glycol, Hexylene Glycol, Phenoxyethanol, Red 40 (CI 16035), Yellow 5 (CI 19140)."
+       },
+       "Avocado Superfood Nourishing Mask": {
+              "price": 16.0,
+              "link": "https://www.beautypedia.com/products/Avocado-Superfood-Nourishing-Mask/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Fourth Ray Beauty",
+              "claims": "Nourishing Mask is uniquely designed to give your skin a healthy boost. Power-packed with vitamins, minerals, and antioxidants for an overall healthy-looking complexion. Infused with good for you greens: Avocado, Matcha, and Kale - all known to nourish, soften, and replenish skin.",
+              "ingredients": "Water, Hydrolyzed Corn Starch, Kaolin, Glycerin, Polysorbate 20, Agave Tequilana Stem Extract, Sodium Acrylates Crosspolymer-2, Olea Europaea (Olive) Fruit Oil, Magnesium Aluminum Silicate, Persea Gratissima (Avocado) Oil, Camellia Sinensis Leaf Extract, Brassica Oleracea Acephala Leaf Extract, Brassica Oleracea Italica (Broccoli) Extract, Spirulina Maxima Extract, Pascopyron Smithii Extract, Cucumis Sativus (Cucumber) Fruit Extract, Nigella Sativa Extract, Rubus Fruiticosus (Blackberry) Leaf Extract, Citrus Aurantium Dulcis Fruit Extract, Coriandrum Sativum (Coriander) Leaf Extract, Sodium Hyaluronate, Tourmaline Extract, Leuconostoc/Radish Root Ferment, Glycine Soja (Soybean) Oil, Propanediol, Arginine, Hydrated Silica, Citric Acid, Potassium Sorbate, Sodium Benzoate, Butylene Glycol, Caprylyl Glycol, Hexylene Glycol, Phenoxyethanol, Fragrance, Chromium Oxide Greens (CI 77288), Chromium Hydroxide Green (CI 77289), Titanium Dioxide (CI 77891)."
+       },
+       "Avocado + Aloe Double Shot Serum": {
+              "price": 14.0,
+              "link": "https://www.beautypedia.com/products/Avocado-+-Aloe-Double-Shot-Serum/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Fourth Ray Beauty",
+              "claims": "Give your skin a super shot of good-for-you greens. Fourth Ray Beauty's Avocado + Aloe Double Shot Serum does double duty, nourishing, and replenishing skin with vitamin-rich phytonutrients. Avocado, Aloe, and Cucumber work in harmony restoring and hydrating skin. Your skin will be all about these greens!",
+              "ingredients": "Water, Caprylic/Capric Triglyceride, Propanediol, Glycerin, Pentylene Glycol, Persea Gratissima (Avocado) Oil, Oryza Sativa (Rice) Bran Extract, Argania Spinosa Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Aloe Barbadensis Leaf Juice, Cucumis Sativus (Cucumber) Fruit Water, Rosa Canina Fruit Oil, Helianthus Annuus (Sunflower) Extract, Sodium Hyaluronate, Mauritia Flexuosa Fruit Oil, Brassica Oleracea Acephala Leaf Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Salvia Hispanica Seed Oil, Brassica Oleracea Italica (Broccoli) Extract, Camellia Sinensis Leaf Extract, Sirulina Maxima Extract, Gluconolactone, Sodium Chloride, Tocopherol, Sodium Benzoate, Sodium Hydroxide, Leuconostoc/Radish Root Ferment Filtrate, Calcium Gluconate, Caprylyl Glycol, Potassium Sorbate, Citric Acid, Hexylene Glycol, Phenoxyethanol, Fragrance, Blue 1 (Ci 42090), Red 4 (Ci 14700), Yellow 5 (Ci 19140)."
+       },
+       "A-HA Moment Exfoliating Enzyme Mask": {
+              "price": 15.0,
+              "link": "https://www.beautypedia.com/products/A-HA-Moment-Exfoliating-Enzyme-Mask/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Fourth Ray Beauty",
+              "claims": "A-HA Moment Exfoliating Enzyme Mask is the must have, at-home facial to instantly resurface skin. Powered by a blend of Alpha Hydroxy Acids (AHA's) and Papaya Enzymes that are known to exfoliate dull skin, instantly revealing a fresh, new, and nourished complexion.",
+              "ingredients": "Water, Glycerin, Vitis Vinifera (Grape) Seed Oil, Glycolic Acid, Zea Mays (Corn) Starch, Sodium Hydroxide, Argania Spinosa Kernel Oil, Cetyl Alcohol, Lactobacillus/Papaya Fruit Ferment Extract, Vaccinium Macrocarpon (Cranberry) Fruit Powder, Cetearyl Olivate, Euterpe Oleracea Fruit Extract, Hylocereus Undatus Fruit Extract, Lycium Barbarum Fruit Extract, Citrus Limon (Lemon) Fruit Extract, Vaccinium Myrtillus Fruit Extract, Gluconolactone, Lactic Acid, Salicylic Acid, Tartaric Acid, Saccharum Officinarum (Sugar Cane) Extract, Acer Saccharum (Sugar Maple) Extract, Citrus Paradisi (Grapefruit) Fruit Extract, Citrus Clementina Fruit Extract, Citrus Tangerina (Tangerine) Peel Extract, Citrus Aurantium Dulcis (Orange) Fruit Extract, Citrus Aurantium Dulcis (Orange) Peel Extract, Myrciaria Dubia Fruit Extract, Opuntia Ficus Indica Seed Oil, Punica Granatum Fruit Extract, Calendula Officinalis Flower Extract, Quartz, Algin, Xanthan Gum, Sorbitan Olivate, Caprylic/Capric Triglyceride, Citric Acid, Leuconostoc/Radish Root Ferment Filtrate , Aluminum Hydroxide, Caprylyl Glycol, Ethylhexylglycerin, Hexylene Glycol, Phenoxyethanol, Titanium Dioxide (CI 77891)."
+       },
+       "The Daily Facial Moisturizer": {
+              "price": 16.0,
+              "link": "https://www.beautypedia.com/products/The-Daily-Facial-Moisturizer/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Fourth Ray Beauty",
+              "claims": "Meet your skin\u2019s new best friend for all things moisture. This cream helps lock in mega moisture with plant-derived squalane to enhance your complexion\u2019s moisture balance.",
+              "ingredients": "Water, Caprylic/capric Triglyceride, Squalane, Glycerin, C15-19 Alkane, Cetyl Alcohol, Cetearyl Alcohol, Glyceryl Stearate Citrate, Cetearyl Olivate, C13-14 Alkane, Litchi Chinensis Fruit Extract, Sodium Hyaluronate, Tocopherol, Panthenol, Hydrolyzed Jojoba Esters, Glycine Soja (Soybean) Sterols, Camellia Sinensis Leaf Extract, Pyrus Malus (Apple) Fruit Extract, Avena Sativa (Oat) Bran Extract, Calendula Officinalis Flower Extract, Allantoin, Linoleic Acid, Phospholipids, Sodium PCA, Plankton Extract, Laminaria Saccharina Extract, Psuedoateromonas Exopolysaccharides, Cucumis Melo (Melon) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Citrullus Lanatus (Watermelon) Fruit Extract, Punica Granatum Fruit Extract, Malus Sylvestris Flower Extract, Lens Esculenta (Lentil) Fruit Extract, Prunus Amygdalus Dulcis (Sweet Almond) Fruit Extract, Jasminum Officinale (Jasmine) Flower/Leaf Extract, Canaga Odorata Flower Extract, Vanilla Planifolia Fruit Extract, Citrus Clementina Fruit Extract, Citrus Tangerina (Tangerine) Peel Extract, Citrus Aurantium Dulcis (Orange) Peel Extract, Citrus Paradisi (Grapefruit) Fruit Extract, Citrus Grandis (Grapefruit) Peel Extract, Citrus Limon (Lemon) Peel Extract, Citrus Aurantifolia (Lime) Peel Extract, Mentha Viridis (Spearmint) Extract, Quartz, Sodium Salicylate, Sodium Lactate, Glyceryl Caprylate, Sorbitan Olivate, Maltodextrin, Glycol Distearate, Carbomer, Butylene Glycol, Citric Acid, Caprylyl Glycol, Hexylene Glycol, Potassium Sorbate."
+       },
+       "The Daily Eye Cream": {
+              "price": 15.0,
+              "link": "https://www.beautypedia.com/products/The-Daily-Eye-Cream/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Fourth Ray Beauty",
+              "claims": "Here\u2019s your go-to for adding mega moisture, while perfectly prepping eyes on the daily. Powered by plant-derived Squalane, plus Shea Butter and Lychee, to replenish moisture for supple, healthy-looking skin around the delicate eye area.",
+              "ingredients": "Water, Glycerin, Cetearyl Alcohol, Argania Spinosa Kernel Oil, Caprylic/Capric Triglyceride, Glyceryl Stearate, Isononyl Isononanoate, Theobroma Grandiflorum Seed Butter, C18-21 Alkane, Oleic/Linoleic/Linolenic Polyglycerides, Glyceryl Stearate Citrate, PEG-100 Stearate, Butyrospermum Parkii (Shea Butter), Litchi Chinensis Fruit Extract, Camellia Sinensis Leaf Extract, Squalane, Sodium Hyaluronate, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Avena Sativa (Oat) Kernel Extract, Coffea Arabica (Coffee) Seed Extract, Tetrahexyldecyl Ascorbate, Panthenol, Allantoin, Ximenia Americana Seed Oil, Quartz, Xanthan Gum, Glyceryl Caprylate, Polyglyceryl-2 Stearate, Stearyl Alcohol, Carbomer, Pentylene Glycol, Butylene Glycol, Polysorbate 20, Benzyl Alcohol, Dehydroacetic Acid."
+       },
+       "Rainfall 2% Hyaluronic Acid Serum": {
+              "price": 16.0,
+              "link": "https://www.beautypedia.com/products/Rainfall-2-Hyaluronic-Acid-Serum/?archive_search=%2Fskin-care%2F",
+              "num faves": 7,
+              "brand": "Fourth Ray Beauty",
+              "claims": "Rainfall 2% Hyaluronic Acid Serum instantly drenches skin with hydration, immediately delivering replenishing and plumping benefits for a more bouncy, youthful-looking complexion.",
+              "ingredients": "Water, Glycerin, Sodium Hyaluronate, Propanediol, Polysorbate 20, PEG-40 Hydrogenated Castor Oil, Cucumis Sativus (Cucumber) Fruit Water, Cucumis Sativus (Cucumber) Fruit Extract, Cocos Nucifera (Coconut) Water, Cocos Nucifera (Coconut) Fruit Juice, Sodium Carrageenan, Phyllostachis Bambusoides Juice, Sea Salt, Quartz, Caprylic/Capric Triglyceride, Glyceryl Acrylate/Acrylic Acid Copolymer, Sodium Hydroxide, Phenoxyethanol."
+       },
+       "Calm + Restore Triple Oat Sensitive Skin Face Serum": {
+              "price": 17.99,
+              "link": "https://www.beautypedia.com/products/Calm-+-Restore-Triple-Oat-Sensitive-Skin-Face-Serum/?archive_search=%2Fskin-care%2F",
+              "num faves": 15,
+              "brand": "Aveeno",
+              "claims": "Instantly soothe skin and fortify its moisture barrier with this hydrating face serum. Formulated with nourishing triple oat complex and calming feverfew, the facial serum is ideal for sensitive skin.",
+              "ingredients": "Water, Glycerin, Butylene Glycol, Bis-PEG-18 Methyl Ether Dimethyl Silane, Isodecyl Neopentanoate, Pentaerythrityl Tetraethylhexanoate, Ethylhexylglycerin, Phenoxyethanol, Ammonium Acryloyldimethyltaurate/VP Copolymer, Chlorphenesin, Dimethicone, Succinoglycan, Chrysanthemum Parthenium (Feverfew) Flower/Leaf/Stem Juice, Avena Sativa (Oat) Kernel Flour, Avena Sativa (Oat) Kernel Oil, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Dimethiconol, Sodium Hydroxide, Avena Sativa (Oat) Kernel Extract."
+       },
+       "Calm + Restore Nourishing Oat Cleanser for Sensitive Skin": {
+              "price": 8.99,
+              "link": "https://www.beautypedia.com/products/Calm-+-Restore-Nourishing-Oat-Cleanser-for-Sensitive-Skin/?archive_search=%2Fskin-care%2F",
+              "num faves": 85,
+              "brand": "Aveeno",
+              "claims": "Gently cleanse and hydrate skin with this gentle gel facial cleanser. The face wash for sensitive skin is hypoallergenic, non-comedogenic and contains nourishing oat and calming feverfew.",
+              "ingredients": "Water, Glycerin, Butylene Glycol, Avena Sativa (Oat) Kernel Flour, Polysorbate 20, Poloxamer 188, Zea Mays (Corn) Starch, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Caprylyl Glycol, Phenoxyethanol, Disodium EDTA, Ethylhexylglycerin, Sodium Polyacrylate, Sodium Hydroxide, Chrysanthemum Parthenium (Feverfew) Flower/Leaf/Stem Juice, Sodium Hyaluronate."
+       },
+       "Calm + Restore Oat Gel Face Moisturizer": {
+              "price": 17.99,
+              "link": "https://www.beautypedia.com/products/Calm-+-Restore-Oat-Gel-Face-Moisturizer/?archive_search=%2Fskin-care%2F",
+              "num faves": 9,
+              "brand": "Aveeno",
+              "claims": "Soothe and hydrate sensitive, irritated facial skin with this gel moisturizer. This lightweight gel face cream formula, with nourishing prebiotic oat and calming feverfew, moisturizes for 24 hours.",
+              "ingredients": "Water, Glycerin, Dimethicone, Cetearyl Olivate, Avena Sativa (Oat) Kernel Flour, Sorbitan Olivate, Polyacrylamide, Synthetic Beeswax, Phenoxyethanol, C13-14 Isoparaffin, Butylene Glycol, Dimethicone Crosspolymer, Panthenol, Chlorphenesin, Dimethiconol, Carbomer, Laureth-7, Chrysanthemum Parthenium (Feverfew) Flower/Leaf/Stem Juice, Ethylhexylglycerin, Sodium Hydroxide, Avena Sativa (Oat) Kernel Extract, Centella Asiatica Extract."
+       },
+       "Stubborn Acne AM Treatment with 2.5% Benzoyl Peroxide": {
+              "price": 9.99,
+              "link": "https://www.beautypedia.com/products/Stubborn-Acne-AM-Treatment-with-2.5-Benzoyl-Peroxide/?archive_search=%2Fskin-care%2F",
+              "num faves": 25,
+              "brand": "Neutrogena",
+              "claims": "Reduce breakouts and redness in just a few hours? You\u2019re not dreaming. NEW Neutrogena Stubborn Acne AM Treatment is the real deal. Powered by 2.5% micronized benzoyl peroxide, this derm-proven AM treatment penetrates pores to kill acne-causing bacteria, visibly reducing breakouts and redness throughout the day.",
+              "ingredients": "Active ingredients: Benzoyl Peroxide (2.5%). Inactive ingredients: Water, Carbomer Homopolymer Type B, Ethylhexylglycerin, Sodium Hydroxide, Chlorphenesin, Disodium EDTA, Laureth-4, Hydroxypropyl Methylcellulose."
+       },
+       "Skin Balancing Milky Cleanser 2% Polyhydroxy Acid for Dry Skin": {
+              "price": 10.99,
+              "link": "https://www.beautypedia.com/products/Skin-Balancing-Milky-Cleanser-2-Polyhydroxy-Acid-for-Dry-Skin/?archive_search=%2Fskin-care%2F",
+              "num faves": 6,
+              "brand": "Neutrogena",
+              "claims": "The one that moisturizes + soothes. Meet the perfect match for dry, sensitive skin! This milky cleanser with gentle PHA exfoliates and conditions skin while respecting its natural pH. Hypoallergenic and developed with dermatologists, it melts away dirt and impurities while protecting skin\u2019s moisture barrier. Sound like the one for you?",
+              "ingredients": "Water, Helianthus Annuus (Sunflower) Seed Oil, Glycerin, Gluconolactone, Glyceryl Stearate, PEG-100 Stearate, Sorbitol, Sodium Acrylates Copolymer, Carbomer, Sodium Hydroxide, PEG-40 Hydrogenated Castor Oil, Persea Gratissima (Avocado) Oil, Caprylyl Glycol, Fragrance, Lecithin, Sodium Citrate, p-Anisic Acid, Chlorphenesin, Allantoin."
+       },
+       "Skin Balancing Gel Cleanser 2% Polyhydroxy Acid for Combination Skin": {
+              "price": 10.99,
+              "link": "https://www.beautypedia.com/products/Skin-Balancing-Gel-Cleanser-2-Polyhydroxy-Acid-for-Combination-Skin/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Neutrogena",
+              "claims": "The one that purifies + softens. Meet the perfect match for normal to combination skin! With gentle PHA, this gel cleanser goes beyond clean\u2013exfoliating and conditioning skin at the same time. Developed with dermatologists, this hypoallergenic formula respects skin\u2019s natural pH while smoothing and softening skin into perfect balance.",
+              "ingredients": "Water, Sodium C14-16 Olefin Sulfonate, Cocamidopropyl Hydroxysultaine, Sorbitol, Gluconolactone, Sodium Benzoate, Sodium Hydroxide, Potassium Acrylates Copolymer, Disodium EDTA, Fragrance, Glycerin, Aloe Barbadensis Leaf Extract."
+       },
+       "Skin Balancing Clay Cleanser 2% Polyhydroxy Acid for Oily Skin": {
+              "price": 10.99,
+              "link": "https://www.beautypedia.com/products/Skin-Balancing-Clay-Cleanser-2-Polyhydroxy-Acid-for-Oily-Skin/?archive_search=%2Fskin-care%2F",
+              "num faves": 0,
+              "brand": "Neutrogena",
+              "claims": "The one that mattifies + conditions. Meet the perfect match for oily skin! This plush clay cleanser is formulated with gentle PHA to exfoliate and condition skin at the same time. Infused with mattifying kaolin clay, it absorbs excess oil while respecting skin\u2019s delicate moisture barrier. The result? Soft, balanced skin.",
+              "ingredients": "Water, Glycerin, Kaolin, Bentonite, Sodium Methyl Cocoyl Taurate, Gluconolactone, Citric Acid, Sodium Hydroxide, Sodium Benzoate, Xanthan Gum, Fragrance, Sodium Citrate, Disodium EDTA, Titanium Dioxide."
+       },
+       "Truly Glowing Eye Gel Cream": {
+              "price": 17.99,
+              "link": "https://www.beautypedia.com/products/Truly-Glowing-Eye-Gel-Cream/?archive_search=%2Fskin-care%2F",
+              "num faves": 142,
+              "brand": "Burt's Bees",
+              "claims": "With the three-dimensional moisture of Eye Gel Cream, a rested and radiant look is always within reach. Our Hydrate & Glow complex is an intentional blend of proteins, humectants and oils\u2014all things that your skin makes on its own to keep its cells plumped and hydrated. This complete formula boosts your skin's moisture above and below the surface, cushioning it and allowing it to reflect more light and appear radiant.",
+              "ingredients": "Water, Glycerin, Caprylic/Capric Triglyceride, Isoamyl Laurate, Inulin, Mango Butter Dimer Dilinoleyl Esters/Dimer Dilinoleate Copolymer, Squalane, Theobroma Grandiflorum Seed Butter, Polyglyceryl-6 Distearate, Carthamus Tinctorius (Safflower) Seed Oil, Hydrolyzed Pea Protein, Propanediol, Simmondsia Chinensis (Jojoba) Seed Oil, Jojoba Esters, Sclerotium Gum, Xanthan Gum, Polyglyceryl-3 Beeswax, Cetyl Alcohol, Sodium Hyaluronate, Lecithin, Tocopherol, Pullulan, Caramel, Lactic Acid, Glycine Soja (Soybean) Oil, Silica, Potassium Sorbate, Phenoxyethanol."
+       },
+       "Pink Cloud Creamy Jelly Cleanser": {
+              "price": 24.0,
+              "link": "https://www.beautypedia.com/products/Pink-Cloud-Creamy-Jelly-Cleanser/?archive_search=%2Fskin-care%2F",
+              "num faves": 6,
+              "brand": "Herbivore Botanicals",
+              "claims": "You asked for a low-foaming, non-drying, non-fragranced, cleanser, so we created Pink Cloud Rosewater + Tremella Creamy Jelly Cleanser. This dreamy, pH-balanced formula effectively cleanses, hydrates and preps your skin so the rest of your skincare works better. Formulated without sulfates and synthetics, Pink Cloud Cleanser is the all-natural essential first step of your skincare ritual.",
+              "ingredients": "Aqua/Water/Eau, Rosa Damascena Flower Water, Decyl Glucoside, Glycerin, Sodium Lauroyl Lactylate, Squalane, Glyceryl Caprylate, Xanthan Gum, Glyceryl Stearate, Tremella Fuciformis Sporocarp Extract, Caprylhydroxamic Acid, Camellia Sinensis Leaf Extract, Aloe Barbadensis Leaf Juice, Citric Acid, Eclipta Prostrata Extract, Sodium Hyaluronate, Melia Azadirachta Leaf Extract, Moringa Oleifera Seed Oil, Cocos Nucifera (Coconut) Fruit Juice, Tapioca Starch."
+       }
+}
