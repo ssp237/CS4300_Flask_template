@@ -8,6 +8,7 @@
     "pimple",
     "pimples",
     "breakout",
+    "breakouts",
     "texture"
   ],
   "Antioxidant": [
@@ -17,27 +18,38 @@
     "texture",
     "age",
     "old",
-    "dull"
+    "dull",
+    "elasticity",
+    "firmness"
   ],
   "Cell-communicating ingredient": [
 
   ],
   "Exfoliant": [
     "bumpy",
-    "texture"
+    "bumps",
+    "texture",
+    "smooth",
+    "blackheads",
+    "whiteheads",
+    "clogged",
+    "pores"
   ],
   "Skin brightening": [
     "dull",
+    "dullness"
     "spots",
     "color",
     "hyperpigmentation",
     "dark",
-    "dark spots"
+    "spotty"
   ],
   "Skin-identical ingredient": [
   ],
   "Soothing": [
     "inflammed",
+    "inflammation",
+    "itchy",
     "red",
     "angry",
     "sensitive"
@@ -45,7 +57,7 @@
   "Sunscreen": [
     "sun",
     "damage",
-    "sun damage"
+    "protection"
   ],
   "Abrasive/scrub": [
     "texture",
@@ -55,7 +67,9 @@
     "acne",
     "pimple",
     "breakout",
-    "pimples"
+    "breakouts",
+    "pimples",
+    "comedones"
   ],
   "Buffering": [
   ],
@@ -70,10 +84,13 @@
   "Moisturizer/humectant": [
     "inflammed",
     "red",
-    "angry",
     "sensitive",
     "dehydrated",
-    "dry"
+    "dry",
+    "dryness",
+    "hydration",
+    "soft",
+    "softer"
   ],
   "Perfuming": [
   ],
@@ -84,7 +101,11 @@
   "Surfactant/cleansing": [
     "dirty",
     "oily",
-    "oil"
+    "oil",
+    "cleaning",
+    "cleansing",
+    "cleaner",
+    "clean"
   ],
   "Viscosity controlling": [
   ]

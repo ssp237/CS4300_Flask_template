@@ -5,7 +5,8 @@ bad = ['foundation', 'mascara', 'brow', 'eyeliner', 'pencil',
        'lipstick', 'gloss', 'blush', 'concealer', 'tan', 'bronzer',
        'primer', 'lippie', 'palette', 'highlight', 'eyeshadow', 'powder',
        'eye shadow', 'cheek duo', 'bronzing', 'compact', 'blotting',
-       'brush', 'brushes', 'setting', 'corrector', 'tinted', 'strobing']
+       'brush', 'brushes', 'setting', 'corrector', 'tinted', 'strobing'
+       'nail' ,'cuticle', 'lip', 'colour']
 newdata = {}
 for key, dic in data.items() :
     tag = True
