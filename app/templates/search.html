@@ -1,8 +1,8 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="/static/bootstrap.min.css">
   <link rel="stylesheet" href="/static/main.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
 </head>
 
 <body>
@@ -31,8 +31,8 @@
   <div class="results">
     <form class="form-inline global-search">
       {% if data %}
-      <h3>{{output_message}}</h3>
-      {% for name, d in data.items() %}
+      <p style="color: #70757a; ">{{output_message}}</p>
+      {% for d in data %}
       <br>
       <div class="product row">
         <!-- <div class="col col-lg-3">
@@ -46,18 +46,17 @@
           <p>##</p>
         </div> -->
         <div style="display:block;">
-          <h4>{{d}}</h4>
+          <h4>{{d[0]}}</h4>
         </div>
         <div style="display:block;">
-          <p>{{d.brand}}</p>
+          <p>by {{d[1]}}</p>
         </div>
         <div style="display:block;">
-          <p>${{d.price}}</p>
+          <p>${{d[2]}}</p>
         </div>
         <div style="display:block;">
           <!-- <p>{{d["num faves"]}} people like this</p> -->
         </div>
-
       </div>
       {% endfor %}
       {% endif %}
