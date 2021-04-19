@@ -14,27 +14,29 @@
       <p>by {{ netid }}</p>
     </div>
 
-    <form class="form-inline global-search query">
-      <p>
-        What are your skin care concerns?
-      </p>
+    <div class="query">
+      <form class="form-inline global-search">
+        <p>
+          What are your skin care concerns?
+        </p>
 
-      <br><br>
+        <br><br>
 
-      <div class="form-group">
-        <input id="input" type="text" name="search" class="form-control" placeholder="ie. fighting acne">
-      </div>
-      <button type="submit" class="btn btn-info"> Go! </button>
-    </form>
+        <div class="form-group">
+          <input id="input" type="text" name="search" class="form-control" placeholder="ie. fighting acne">
+        </div>
+        <button type="submit" class="btn btn-info"> Go! </button>
+      </form>
+    </div>
   </div>
 
   <div class="results">
     <form class="form-inline global-search">
       {% if data %}
-      <p style="color: #70757a; ">{{output_message}}</p>
+      <p style="color: #b0b3b5; ">{{output_message}}</p>
       {% for d in data %}
       <br>
-      <div class="product row">
+      <div class="product">
         <!-- <div class="col col-lg-3">
           <p>rank</p>
           <p>##</p>
