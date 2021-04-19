@@ -16,10 +16,11 @@ def cos_sim(c, tfidf_mat, category_to_idx):
     Returns: Float
     """
     # query is last row
-    v1 = tfidf_mat[len(tfidf_mat) - 1]
+    v1 = tfidf_mat[-1]
     v2 = tfidf_mat[category_to_idx[c]]
+    if np.linalg.norm(v2) == 0:
+        return 0
     num = np.dot(v1, v2)
-
     return num / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
 

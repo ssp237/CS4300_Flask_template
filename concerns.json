@@ -23,7 +23,6 @@
 
   ],
   "Exfoliant": [
-    "dry",
     "bumpy",
     "texture"
   ],
@@ -50,7 +49,6 @@
   ],
   "Abrasive/scrub": [
     "texture",
-    "dry",
     "bumpy"
   ],
   "Antimicrobial/antibacterial": [
