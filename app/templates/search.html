@@ -1,39 +1,70 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
+
+<head>
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+
+  <div class="header">
+
+    <div class="title">
+      <h1>{{ name }}</h1>
+      <p>by {{ netid }}</p>
+    </div>
+
+    <form class="form-inline global-search query">
+      <p>
+        What are your skin care concerns?
+      </p>
+
+      <br><br>
+
+      <div class="form-group">
+        <input id="input" type="text" name="search" class="form-control" placeholder="ie. fighting acne">
+      </div>
+      <button type="submit" class="btn btn-info"> Go! </button>
+    </form>
+  </div>
+
+  <div class="results">
+    <form class="form-inline global-search">
+      {% if data %}
+      <h3>{{output_message}}</h3>
+      {% for name, d in data.items() %}
+      <br>
+      <div class="product row">
+        <!-- <div class="col col-lg-3">
+          <p>rank</p>
+          <p>##</p>
+        </div> -->
+        <!-- <div class="col col-lg-4">{{d}}</div>
+        <div class="col col-lg-4">$$</div>
+        <div class="col col-lg-4">
+          <p>similarity</p>
+          <p>##</p>
+        </div> -->
+        <div style="display:block;">
+          <h4>{{d}}</h4>
         </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <span style="color: #EA4335; ">S</span>
-                <span style="color: #FBBC05; ">4</span>
-                3
-                <span style="color: #34A853; ">0</span>
-                <span style="color: #EA4335; ">0</span>
-            </h1>
-            
-            <br><br>
-            
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
-            </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
-        <form class="form-inline global-search">
-        {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
-        </form>
-    </body>
+        <div style="display:block;">
+          <p>{{d.brand}}</p>
+        </div>
+        <div style="display:block;">
+          <p>${{d.price}}</p>
+        </div>
+        <div style="display:block;">
+          <!-- <p>{{d["num faves"]}} people like this</p> -->
+        </div>
+
+      </div>
+      {% endfor %}
+      {% endif %}
+    </form>
+  </div>
+
+
+</body>
 
 </html>
