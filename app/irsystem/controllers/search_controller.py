@@ -77,11 +77,7 @@ def search():
         search_data = []
         output_message = ''
     else:
-<<<<<<< HEAD
         output_message = "Here are the products we found for: " + query
-=======
-        output_message = "Your search: " + query
->>>>>>> 96dbd10c2a7b654fda7209de5c7879ee004dee43
         search_data = rank_products(query, categories, products_to_indices,
                                     indices_to_products, data, category_to_index)
 
