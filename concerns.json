@@ -1,0 +1,91 @@
+{
+  "Anti-acne": [
+    "acne",
+    "redness",
+    "oil",
+    "oily",
+    "pores",
+    "pimple",
+    "pimples",
+    "breakout",
+    "texture"
+  ],
+  "Antioxidant": [
+    "aging",
+    "wrinkles",
+    "lines",
+    "texture",
+    "age",
+    "old",
+    "dull"
+  ],
+  "Cell-communicating ingredient": [
+
+  ],
+  "Exfoliant": [
+    "bumpy",
+    "texture"
+  ],
+  "Skin brightening": [
+    "dull",
+    "spots",
+    "color",
+    "hyperpigmentation",
+    "dark",
+    "dark spots"
+  ],
+  "Skin-identical ingredient": [
+  ],
+  "Soothing": [
+    "inflammed",
+    "red",
+    "angry",
+    "sensitive"
+  ],
+  "Sunscreen": [
+    "sun",
+    "damage",
+    "sun damage"
+  ],
+  "Abrasive/scrub": [
+    "texture",
+    "bumpy"
+  ],
+  "Antimicrobial/antibacterial": [
+    "acne",
+    "pimple",
+    "breakout",
+    "pimples"
+  ],
+  "Buffering": [
+  ],
+  "Chelating": [
+  ],
+  "Colorant": [
+  ],
+  "Emollient": [
+  ],
+  "Emulsifying": [
+  ],
+  "Moisturizer/humectant": [
+    "inflammed",
+    "red",
+    "angry",
+    "sensitive",
+    "dehydrated",
+    "dry"
+  ],
+  "Perfuming": [
+  ],
+  "Preservative": [
+  ],
+  "Solvent": [
+  ],
+  "Surfactant/cleansing": [
+    "dirty",
+    "oily",
+    "oil"
+  ],
+  "Viscosity controlling": [
+  ]
+}
