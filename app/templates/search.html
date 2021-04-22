@@ -7,8 +7,8 @@
 
 <body>
 
+  {% if not data %}
   <div class="header">
-
     <div class="title">
       <h1>{{ name }}</h1>
       <p>by {{ netid }}</p>
@@ -16,54 +16,57 @@
 
     <div class="query">
       <form class="form-inline global-search">
-        <p>
-          What are your skin care concerns?
-        </p>
-
-        <br><br>
-
         <div class="form-group">
-          <input id="input" type="text" name="search" class="form-control" placeholder="ie. fighting acne">
+          <input id="input" type="text" name="search" class="form-control"
+            placeholder="What are your skin care concerns?">
         </div>
         <button type="submit" class="btn btn-info"> Go! </button>
       </form>
     </div>
   </div>
+  {% endif %}
 
-  <div class="results">
-    <form class="form-inline global-search">
-      {% if data %}
-      <p style="color: #71777b; ">{{output_message}}</p>
-      {% for d in data %}
-      <br>
-      <div class="product">
-        <!-- <div class="col col-lg-3">
-          <p>rank</p>
-          <p>##</p>
-        </div> -->
-        <!-- <div class="col col-lg-4">{{d}}</div>
-        <div class="col col-lg-4">$$</div>
-        <div class="col col-lg-4">
-          <p>similarity</p>
-          <p>##</p>
-        </div> -->
-        <div style="display:block;">
-          <h4>{{d[0]}}</h4>
-        </div>
-        <div style="display:block;">
-          <p>by {{d[1]}}</p>
-        </div>
-        <div style="display:block;">
-          <p>${{d[2]}}</p>
-        </div>
-        <div style="display:block;">
-          <!-- <p>{{d["num faves"]}} people like this</p> -->
-        </div>
+
+  {% if data %}
+  <div class="results-page">
+    <div class="info">
+      <div class="title">
+        <h1>{{ name }}</h1>
+        <p>by {{ netid }}</p>
       </div>
-      {% endfor %}
-      {% endif %}
-    </form>
+    </div>
+
+    <div class="results">
+      <div class="query">
+        <form class="form-inline global-search">
+          <div class="form-group">
+            <input id="input" type="text" name="search" class="form-control"
+              placeholder="What are your skin care concerns?">
+          </div>
+          <!-- <button type="submit" class="btn btn-info"> Go! </button> -->
+        </form>
+      </div>
+
+      <form class="form-inline global-search">
+        <p style="color: #71777b; ">{{output_message}}</p>
+        {% for d in data %}
+        <br>
+        <div class="product">
+          <div style="display:block;">
+            <h4>{{d[0]}}</h4>
+          </div>
+          <div style="display:block;">
+            <p>by {{d[1]}}</p>
+          </div>
+          <div style="display:block;">
+            <p>${{d[2]}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </form>
+    </div>
   </div>
+  {% endif %}
 
 
 </body>
