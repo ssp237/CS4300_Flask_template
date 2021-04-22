@@ -35,9 +35,10 @@
   }
 
   .title h1 {
-    font-size: 4vh;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 5vh;
     font-weight: 500 !important;
-    font-variant: small-caps;
+    /* font-variant: small-caps; */
   }
 
   .title p {
@@ -61,6 +62,7 @@
   }
 
   .results-page {
+    height: 100vh;
     display: flex;
     /* background-color: #f2dede; */
     /* background-image: linear-gradient(to top,#46150c,#942b1d); */
@@ -89,6 +91,7 @@
 
   .results {
     width: 65%;
+    overflow-y: scroll;
     margin-left: 35%;
     padding: 5%;
     background-color: white;
