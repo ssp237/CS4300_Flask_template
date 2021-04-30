@@ -1,0 +1,103 @@
+{
+    "abrasive/scrub": {
+        "relevant": ["scrub_products"],
+        "irrelevant": []
+    },
+    "absorbent/mattifier": {
+        "relevant": ["oil_absorbing_products"],
+        "irrelevant": ["face_oil_products"]
+    },
+    "anti-acne": {
+        "relevant": ["acne_products", "bha_products"],
+        "irrelevant": ["face_oil_products"]
+    },
+    "antimicrobial/antibacterial": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "antioxidant": {
+        "relevant": ["retinol_products"],
+        "irrelevant": ["acne_products"]
+    },
+    "astringent": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "buffering": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "cell-communicating ingredient": {
+        "relevant": ["retinol_products"],
+        "irrelevant": []
+    },
+    "chelating": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "colorant": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "deodorant": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "emollient": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "emulsifying": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "emulsion stabilising": {
+        "relevant": [],
+        "irrelevant": []
+    }, 
+    "exfoliant": {
+        "relevant": ["exfoliator_products"],
+        "irrelevant": []
+    },
+    "moisturizer/humectant": {
+        "relevant": ["aha_products", "daytime_moisturizer_products", "face_oil_products", 
+                     "moisturizer_products", "nighttime_moisturizer_products"],
+        "irrelevant": ["oil_absorbing_products"]
+    },
+    "perfuming": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "preservative": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "skin brightening": {
+        "relevant": ["skin_brightening_products", "vitaminC_products"],
+        "irrelevant": []
+    },
+    "skin-identical ingredient": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "solvent": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "soothing": {
+        "relevant": [],
+        "irrelevant": []
+    },
+    "sunscreen": {
+        "relevant": ["sunscreen_products", "water_resistant_sunscreen_products"],
+        "irrelevant": []
+    },
+    "surfactant/cleansing": {
+        "relevant": ["cleanser_products", "cleansing_balm_products", "makeup_remover_products"],
+        "irrelevant": []
+    },
+    "viscosity controlling": {
+        "relevant": [],
+        "irrelevant": []
+    }
+}

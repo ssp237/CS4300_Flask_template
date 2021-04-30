@@ -1,112 +1,200 @@
 {
-  "Anti-acne": [
-    "acne",
-    "redness",
-    "oil",
-    "oily",
-    "pores",
-    "pimple",
-    "pimples",
-    "breakout",
-    "breakouts",
-    "texture"
-  ],
-  "Antioxidant": [
-    "aging",
-    "wrinkles",
-    "lines",
-    "texture",
-    "age",
-    "old",
-    "dull",
-    "elasticity",
-    "firmness"
-  ],
-  "Cell-communicating ingredient": [
-
-  ],
-  "Exfoliant": [
-    "bumpy",
-    "bumps",
-    "texture",
-    "smooth",
-    "blackheads",
-    "whiteheads",
-    "clogged",
-    "pores"
-  ],
-  "Skin brightening": [
-    "dull",
-    "dullness",
-    "spots",
-    "color",
-    "hyperpigmentation",
-    "dark",
-    "spotty"
-  ],
-  "Skin-identical ingredient": [
-  ],
-  "Soothing": [
-    "inflamed",
-    "inflammation",
-    "itchy",
-    "red",
-    "angry",
-    "sensitive"
-  ],
-  "Sunscreen": [
-    "sun",
-    "damage",
-    "protection"
-  ],
-  "Abrasive/scrub": [
-    "texture",
-    "bumpy"
-  ],
-  "Antimicrobial/antibacterial": [
-    "acne",
-    "pimple",
-    "breakout",
-    "breakouts",
-    "pimples",
-    "comedones"
-  ],
-  "Buffering": [
-  ],
-  "Chelating": [
-  ],
-  "Colorant": [
-  ],
-  "Emollient": [
-  ],
-  "Emulsifying": [
-  ],
-  "Moisturizer/humectant": [
-    "inflammed",
-    "red",
-    "sensitive",
-    "dehydrated",
-    "dry",
-    "dryness",
-    "hydration",
-    "soft",
-    "softer"
-  ],
-  "Perfuming": [
-  ],
-  "Preservative": [
-  ],
-  "Solvent": [
-  ],
-  "Surfactant/cleansing": [
-    "dirty",
-    "oily",
-    "oil",
-    "cleaning",
-    "cleansing",
-    "cleaner",
-    "clean"
-  ],
+    "Abrasive/scrub": [
+    ],
+    "Absorbent/mattifier": [
+        "acne", 
+        "oil", 
+        "oily",
+        "oiliness",
+        "grease",
+        "greasy",
+        "greasiness",
+        "shine",
+        "shiny",
+        "shininess"
+    ],
+    "Anti-acne": [
+        "acne",
+        "pimple",
+        "pimples",
+        "breakout",
+        "breakouts",
+        "bumps",
+        "bumpy",
+        "comedones"
+    ],
+    "Antimicrobial/antibacterial": [
+        "bacteria",
+        "fungi",
+        "antimicrobials",
+        "antimicrobials",
+        "antibacterial",
+        "infected",
+        "infection"
+    ],
+    "Antioxidant": [
+        "aging",
+        "wrinkle",
+        "wrinkly",
+        "wrinkles",
+        "lines",
+        "age",
+        "old",
+        "older",
+        "dull",
+        "dullness",
+        "damage",
+        "damaged",
+        "elastic",
+        "elasticity",
+        "firm",
+        "firmer",
+        "firmness",
+        "brighter",
+        "brighten",
+        "bright",
+        "dull"
+    ],
+    "Astringent": [
+    ],
+    "Buffering": [
+    ],
+    "Cell-communicating ingredient": [
+        "aging",
+        "wrinkle",
+        "wrinkly",
+        "wrinkles",
+        "lines",
+        "age",
+        "old",
+        "older",
+        "dull",
+        "dullness",
+        "damage",
+        "damaged",
+        "elastic",
+        "elasticity",
+        "firm",
+        "firmer",
+        "firmness",
+        "scar",
+        "scars",
+        "scarrring",
+        "scarred",
+        "marks"
+    ],
+    "Chelating": [
+    ],
+    "Colorant": [
+    ],
+    "Deodorant": [
+    ],
+    "Emollient": [
+    ],
+    "Emulsifying": [
+    ],
+    "Emulsion Stabilising": [
+    ],
+    "Exfoliant": [
+        "bumpy",
+        "bumps",
+        "texture",
+        "smooth",
+        "smoother",
+        "blackheads",
+        "blackhead",
+        "whiteheads",
+        "whitehead",
+        "dots",
+        "clogged",
+        "clog",
+        "unclog",
+        "sebum",
+        "pores",
+        "pore",
+        "dead"
+    ],
+    "Moisturizer/humectant": [
+        "dehydrated",
+        "dry",
+        "dryness",
+        "hydration",
+        "hydrate",
+        "moisture",
+        "soft",
+        "softer",
+        "peels",
+        "peeling",
+        "rough",
+        "roughness",
+        "winter",
+        "cold"
+    ],
+    "Perfuming": [
+    ],
+    "Preservative": [
+    ],
+    "Skin brightening": [
+        "dull",
+        "dullness",
+        "spots",
+        "color",
+        "pigmentation",
+        "hyperpigmentation",
+        "dark",
+        "darkness",
+        "spotty",
+        "tone",
+        "tones",
+        "bright",
+        "brighter",
+        "brighten",
+        "fresh",
+        "fresher"
+    ],
+    "Skin-identical ingredient": [
+    ],
+    "Solvent": [
+    ],
+    "Soothing": [
+        "inflamed",
+        "inflammation",
+        "itchy",
+        "itch",
+        "itchiness",
+        "red",
+        "redness",
+        "angry",
+        "sensitive",
+        "sensitivity"
+    ],
+    "Sunscreen": [
+        "sun",
+        "sunny",
+        "summer",
+        "heat",
+        "outside",
+        "outdoors",
+        "protection"
+    ],
+    "Surfactant/cleansing": [
+        "dirty",
+        "dirt",
+        "makeup",
+        "remove",
+        "removal",
+        "cleaning",
+        "cleansing",
+        "cleaner",
+        "clean",
+        "wash",
+        "washing",
+        "washes",
+        "soap",
+        "grease",
+        "greasy"
+    ],
   "Viscosity controlling": [
-  ]
+    ]
+
 }
