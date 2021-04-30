@@ -1,6 +1,6 @@
 {
     "Sunscreen should be worn daily, no matter your location — indoors and outdoors! Even while indoors, UV exposure can occur from UVA, which penetrates through glass." : {
-        "terms": [
+        "terms": {
             "sun": 1,
             "sunny": 1,
             "summer": 1,
@@ -8,12 +8,12 @@
             "outside": 1,
             "outdoors": 1,
             "protection": 1,
-            "spf": 1,
-        ],
+            "spf": 1
+        },
         "source": "https://www.allure.com/story/sunscreen-tips-from-dermatologists"
     },
     "The American Academy of Dermatology always recommends an SPF of 30, because it is clinically proven to be a sufficient amount of protection to reduce or minimize the adverse effects of sunlight. There's little difference between a sunscreen with SPF 30 or something with higher protection." : {
-        "terms": [
+        "terms": {
             "sun": 1,
             "sunny": 1,
             "summer": 1,
@@ -21,12 +21,12 @@
             "outside": 1,
             "outdoors": 1,
             "protection": 1,
-            "spf": 1,
-        ],
+            "spf": 1
+        },
         "source": "https://www.allure.com/story/sunscreen-tips-from-dermatologists"
     },
     "Ideally, sunscreen should be reapplied every two hours, or more frequently if you are swimming or sweating heavily": {
-        "terms": [
+        "terms": {
             "sun": 1,
             "sunny": 1,
             "summer": 1,
@@ -34,12 +34,12 @@
             "outside": 1,
             "outdoors": 1,
             "protection": 1,
-            "spf": 1,
-        ],
+            "spf": 1
+        },
         "source": "https://www.allure.com/story/sunscreen-tips-from-dermatologists"
     },
     "Mineral sunscreen formulas are better suited for those with sensitive skin": {
-        "terms": [
+        "terms": {
             "sun": 1,
             "sunny": 1,
             "summer": 1,
@@ -47,12 +47,12 @@
             "outside": 1,
             "outdoors": 1,
             "protection": 1,
-            "spf": 1,
-        ],
+            "spf": 1
+        },
         "source": "https://www.allure.com/story/sunscreen-tips-from-dermatologists"
     },
     "Vitamin C products should be applied in the morning before heading out for the day, when UV radiation is at its highest": {
-        "terms": [
+        "terms": {
             "dull": 1,
             "dullness": 1,
             "spots": 1,
@@ -69,11 +69,11 @@
             "brighten": 1,
             "fresh": 1,
             "fresher": 1
-        ],
+        },
         "source": "https://www.self.com/story/vitamin-c-for-skin-tips"
     },
     "Experts generally advise using vitamin C products in the morning and retinoids at night.": {
-        "terms": [
+        "terms": {
             "dull": 1,
             "dullness": 1,
             "spots": 1,
@@ -105,11 +105,11 @@
             "firm": 1,
             "firmer": 1,
             "firmness": 1
-        ],
+        },
         "source": "https://www.self.com/story/vitamin-c-for-skin-tips"
     },
     "Apply your vitamin C serum to freshly cleansed skin, before you moisturize.": {
-        "terms": [
+        "terms": {
             "dull": 1,
             "dullness": 1,
             "spots": 1,
@@ -152,11 +152,11 @@
             "washing": 1,
             "washes": 1,
             "soap": 1            
-        ],
+        },
         "source": "https://www.self.com/story/vitamin-c-for-skin-tips"
     },
     "Vitamin C concentrations of around 5% are best suited for dry or sensitive skin. Oily skin or skin with more extensive pigmentation issues can handle higher concentrations, but the effects plateau around 20%.": {
-        "terms": [
+        "terms": {
             "dull": 1,
             "dullness": 1,
             "spots": 1,
@@ -173,11 +173,11 @@
             "brighten": 1,
             "fresh": 1,
             "fresher": 1
-        ],
+        },
         "source": "https://www.self.com/story/vitamin-c-for-skin-tips"
     },
     "Apply moisturizers when your skin is freshly cleaned and dried to lock moisture in.": {
-        "terms": [
+        "terms": {
             "dehydrated": 1,
             "dry": 1,
             "dryness": 1,
@@ -204,11 +204,11 @@
             "washing": 1,
             "washes": 1,
             "soap": 1
-        ],
+        },
         "source": "https://www.considerable.com/health/skin-care/how-to-moisturize-face/"
     },
     "Start with the thinnest consistency products and work your way up to the heaviest. Serums go on first, followed by oils, then creams. The one exception is sunscreen, which should be applied last.": {
-        "terms": [
+        "terms": {
             "dehydrated": 1,
             "dry": 1,
             "dryness": 1,
@@ -230,11 +230,11 @@
             "outdoors": 1,
             "protection": 1,
             "spf": 1
-        ],
+        },
         "source": "https://www.considerable.com/health/skin-care/how-to-moisturize-face/"
     },
     "When you apply your anti-aging facial moisturizer, there’s no reason to stop when you reach your jawline. Try using the same product on your neck, chest, and hands because all of these areas will show signs of aging.": {
-        "terms": [
+        "terms": {
             "aging": 1,
             "wrinkle": 1,
             "wrinkly": 1,
@@ -243,7 +243,6 @@
             "age": 1,
             "old": 1,
             "older": 1,
-            "dull": 1,
             "dullness": 1,
             "damage": 1,
             "damaged": 1,
@@ -256,11 +255,11 @@
             "brighten": 1,
             "bright": 1,
             "dull": 1
-        ],
+        },
         "source": "https://www.considerable.com/health/skin-care/how-to-moisturize-face/"
     },
     "Don’t use your body lotion on your face — it can irritate sensitive facial skin and clog pores.": {
-        "terms": [
+        "terms": {
             "bumpy": 1,
             "bumps": 1,
             "texture": 1,
@@ -291,11 +290,11 @@
             "rough": 1,
             "roughness": 1,
             "winter": 1
-        ],
+        },
         "source": "https://www.considerable.com/health/skin-care/how-to-moisturize-face/"
     },
     "Retinol can be very irritating if used too frequently or if the formulation is too strong for your skin. Start by applying two times per week, slowly increasing the usage to give the skin a chance to acclimate.": {
-        "terms": [
+        "terms": {
             "aging": 1,
             "wrinkle": 1,
             "wrinkly": 1,
@@ -315,13 +314,12 @@
             "firmness": 1,
             "brighter": 1,
             "brighten": 1,
-            "bright": 1,
-            "dull": 1
-        ],
+            "bright": 1
+        },
         "source": "https://www.vogue.com/article/retinol-retinoids-guide-fine-lines-sun-damage-healthy-glow"
     },
     "Skip your retinol product on the day before you exfoliate. Combining them will irritate your skin.": {
-        "terms": [
+        "terms": {
             "aging": 1,
             "wrinkle": 1,
             "wrinkly": 1,
@@ -351,11 +349,11 @@
             "pores": 1,
             "pore": 1,
             "dead": 1
-        ],
+        },
         "source": "https://www.vogue.com/article/retinol-retinoids-guide-fine-lines-sun-damage-healthy-glow"
     },
     "Those with especially sensitive skin, or who struggle with conditions like rosacea or eczema, should be wary of retinol.": {
-        "terms": [
+        "terms": {
             "aging": 1,
             "wrinkle": 1,
             "wrinkly": 1,
@@ -364,7 +362,6 @@
             "age": 1,
             "old": 1,
             "older": 1,
-            "dull": 1,
             "dullness": 1,
             "damage": 1,
             "damaged": 1,
@@ -387,11 +384,11 @@
             "angry": 1,
             "sensitive": 1,
             "sensitivity": 1
-        ],
+        },
         "source": "https://www.vogue.com/article/retinol-retinoids-guide-fine-lines-sun-damage-healthy-glow"
     },
     "Use retinol only at night and wear SPF every day.": {
-        "terms": [
+        "terms": {
             "sun": 1,
             "sunny": 1,
             "summer": 1,
@@ -419,13 +416,12 @@
             "firmness": 1,
             "brighter": 1,
             "brighten": 1,
-            "bright": 1,
-            "dull": 1
-        ],
+            "bright": 1
+        },
         "source": "https://www.vogue.com/article/retinol-retinoids-guide-fine-lines-sun-damage-healthy-glow"
     },
     "Never exfoliate if you have open cuts or wounds or if your skin is sunburned.": {
-        "terms": [
+        "terms": {
             "bumpy": 1,
             "bumps": 1,
             "texture": 1,
@@ -450,11 +446,11 @@
             "outside": 1,
             "outdoors": 1,
             "protection": 1
-        ],
+        },
         "source": "https://www.aad.org/public/everyday-care/skin-care-secrets/routine/safely-exfoliate-at-home"
     },
     "Exfoliating while using retinols may worsen dry skin or even cause acne breakouts.": {
-        "terms": [
+        "terms": {
             "bumpy": 1,
             "bumps": 1,
             "texture": 1,
@@ -471,7 +467,7 @@
             "sebum": 1,
             "pores": 1,
             "pore": 1,
-            "dead": 1
+            "dead": 1,
             "dehydrated": 1,
             "dry": 1,
             "dryness": 1,
@@ -485,20 +481,18 @@
             "rough": 1,
             "roughness": 1,
             "winter": 1,
-            "cold": 1
+            "cold": 1,
             "acne": 1,
             "pimple": 1,
             "pimples": 1,
             "breakout": 1,
             "breakouts": 1,
-            "bumps": 1,
-            "bumpy": 1,
             "comedones": 1
-         ],
+         },
         "source": "https://www.aad.org/public/everyday-care/skin-care-secrets/routine/safely-exfoliate-at-home"
     },
     "Chemical exfoliants are gentler than physical exfoliants.": {
-        "terms": [
+        "terms": {
             "bumpy": 1,
             "bumps": 1,
             "texture": 1,
@@ -516,11 +510,11 @@
             "pores": 1,
             "pore": 1,
             "dead": 1
-        ],
+        },
         "source": "https://coveteur.com/2020/03/02/exfoliating-tips-healthy-skin/"
     },
     "AHA exfoliants will make dry skin feel smoother and more hydrated afterwards.": {
-        "terms": [
+        "terms": {
             "dehydrated": 1,
             "dry": 1,
             "dryness": 1,
@@ -535,11 +529,11 @@
             "roughness": 1,
             "winter": 1,
             "cold": 1
-        ],
+        },
         "source": "https://www.vogue.com/article/retinol-retinoids-guide-fine-lines-sun-damage-healthy-glow"
     },
     "BHA exfoliants are great for oily skin, as these types of acids penetrate into the pores, cleaning up excess oil, sebum, and debris.": {
-        "terms": [
+        "terms": {
             "acne": 1, 
             "oil": 1, 
             "oily": 1,
@@ -550,16 +544,15 @@
             "shine": 1,
             "shiny": 1,
             "shininess": 1,
-            "acne": 1,
             "pimple": 1,
             "pimples": 1,
             "breakout": 1,
-            "breakouts": 1,
-        ],
+            "breakouts": 1
+        },
         "source": "https://www.vogue.com/article/retinol-retinoids-guide-fine-lines-sun-damage-healthy-glow"
     },
     "Try to wash your face twice a day, in the morning and at night.": {
-        "terms": [
+        "terms": {
             "dirty": 1,
             "dirt": 1,
             "makeup": 1,
@@ -575,11 +568,11 @@
             "soap": 1,
             "oil": 1,
             "oiliness": 1
-        ],
+        },
         "source": "https://www.self.com/story/how-to-wash-your-face"
     },
     "When cleansing your face, hot water naturally strips skin of the necessary oil barrier.": {
-        "terms": [
+        "terms": {
             "dirty": 1,
             "dirt": 1,
             "makeup": 1,
@@ -595,11 +588,11 @@
             "soap": 1,
             "oil": 1,
             "oiliness": 1
-        ],
+        },
         "source": "https://www.self.com/story/how-to-wash-your-face"
     },
     "Your gentle cleanser may not be to remove all of your makeup, especially if your products contain mineral SPF ingredients or oil.": {
-        "terms": [
+        "terms": {
             "sun": 1,
             "sunny": 1,
             "summer": 1,
@@ -622,14 +615,13 @@
             "soap": 1,
             "oil": 1,
             "oiliness": 1
-        ],
+        },
         "source": "https://www.self.com/story/how-to-wash-your-face"
     },
     "Reusing the same washcloth over and over again is spreading more bacteria to your face, which can contribute to acne.": {
-        "terms": [
+        "terms": {
             "bacteria": 1,
             "fungi": 1,
-            "antimicrobials": 1,
             "antimicrobials": 1,
             "antibacterial": 1,
             "infected": 1,
@@ -642,11 +634,11 @@
             "bumps": 1,
             "bumpy": 1,
             "comedones": 1
-        ],
+        },
         "source": "https://www.self.com/story/how-to-wash-your-face"
     },
     "If your skin is excessively dry, it may try to compensate for the dryness by overproducing oil. The result? Breakouts.": {
-        "terms": [
+        "terms": {
             "acne": 1,
             "pimple": 1,
             "pimples": 1,
@@ -664,11 +656,11 @@
             "shine": 1,
             "shiny": 1,
             "shininess": 1
-        ],
+        },
         "source": "https://www.healthline.com/health/skin/how-to-get-clear-skin"
     },
     "After sweating, immediately use an exfoliating cleanser to help keep your pores clear and remove excess oil.": {
-        "terms": [
+        "terms": {
             "acne": 1,
             "pimple": 1,
             "pimples": 1,
@@ -692,11 +684,11 @@
             "soap": 1,
             "oil": 1,
             "oiliness": 1
-        ],
+        },
         "source": "https://www.teenvogue.com/story/how-to-treat-a-breakout"
     },
     "Unwashed sheets and pillowcases lead to cross-contamination which leads to pimples.": {
-        "terms": [
+        "terms": {
             "acne": 1,
             "pimple": 1,
             "pimples": 1,
@@ -705,11 +697,11 @@
             "bumps": 1,
             "bumpy": 1,
             "comedones": 1
-        ],
+        },
         "source": "https://www.teenvogue.com/story/how-to-treat-a-breakout"
     },
     "Applying toothpaste or rubbing alcohol are more likely to cause irritation and dryness than treat the actual pimple.": {
-        "terms": [
+        "terms": {
             "acne": 1,
             "pimple": 1,
             "pimples": 1,
@@ -718,7 +710,7 @@
             "bumps": 1,
             "bumpy": 1,
             "comedones": 1
-        ],
+        },
         "source": "https://www.teenvogue.com/story/how-to-treat-a-breakout"
     }
 }
