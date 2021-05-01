@@ -155,7 +155,9 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
     rank_idx = sorted(scores_idx, key = lambda x: (x[0], product_info[idx_to_prod[x[1]]]["num faves"], 
                                             product_info[idx_to_prod[x[1]]]["price"]), reverse = True)
     
-    ranking = list(map(lambda x: idx_to_prod[x[1]], rank_idx))
+    ranking = list(map(lambda x: (idx_to_prod[x[1]], 
+                        product_info[idx_to_prod[x[1]]]["brand"], 
+                        product_info[idx_to_prod[x[1]]]["price"]), rank_idx))
     return ranking
 
 
@@ -163,13 +165,13 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
 def search():
     query = request.args.get('search')
     
-    product = request.forms.get('product-type')
+    product = request.args.get('product-type')
     if product == 'all': product = None
-    skin = request.forms.get('skin-type')
+    skin = request.args.get('skin-type')
     if skin == 'all': skin = None
-    budget_in = request.forms.get('budget')
+    budget_in = request.args.get('budget')
     if budget_in == 'all': budget_in = None
-    sensitive = request.forms.get('sensitivity')
+    sensitive = request.args.get('sensitivity')
     if sensitive == 'high': sensitive = True
     else: sensitive = None
     
@@ -178,12 +180,29 @@ def search():
         output_message = ''
     else:
         output_message = "Here are the products we found for: " + query
-        search_data = rank_products(concerns, categories, products_to_indices, indices_to_products, 
-                                    data, category_to_index, product_types, price_ranges, 
+        search_data = rank_products(query, categories, products_to_indices, indices_to_products, 
+                                    data, category_to_index, product_types, price_ranges,
                                     product_type=product, skin_type=skin, budget=budget_in, sensitivity=sensitive)
         if search_data == 'invalid query':
             search_data = []
             output_message = 'Sorry, that query is invalid.'
 
     return render_template('search.html', name=project_name, netid=net_id,
-                           output_message=output_message, data=search_data[:10])
+                           output_message=output_message, data=search_data[:10], 
+                           query=query, product_types=product_types, product_type=product, skin_type=skin,
+                           budget=budget_in, sensitivity=sensitive)
+
+# @irsystem.route('/filter', methods=['POST'])
+# def filter():
+#     product_type = str(request.form.get('product-type'))
+#     skin_type = str(request.form.get('skin-type'))
+#     query = str(request.args.get('search'))
+    
+#     search_data = rank_products(query, categories, products_to_indices,
+#                               indices_to_products, data, category_to_index,
+#                               product_types, price_ranges, 
+#                               product_type=product_type, skin_type=skin_type)
+#     output_message = "We found " + str(len(search_data)) + " products for: " + query
+    
+#     return render_template('search.html', name=project_name, netid=net_id,
+#                            output_message=output_message, data=search_data[:10], query=query)
