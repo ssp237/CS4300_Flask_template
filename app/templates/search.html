@@ -17,12 +17,14 @@
     <div class="query">
       <form class="form-inline global-search">
         <div class="form-group">
-          <input id="input" type="text" name="search" class="form-control"
-            placeholder="What are your skin care concerns?">
+          <input id="input" type="search" name="search" class="form-control"
+            placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns">
         </div>
         <button type="submit" class="btn btn-info"> Go! </button>
       </form>
     </div>
+
+    <!-- <a href=""> Advanced Esthetician </a> -->
   </div>
   {% endif %}
 
@@ -38,12 +40,37 @@
 
     <div class="results">
       <div class="query">
-        <form class="form-inline global-search">
+        <form class="form-inline global-search" method="POST" action="">
           <div class="form-group">
-            <input id="input" type="text" name="search" class="form-control"
-              placeholder="What are your skin care concerns?">
+            <input id="input" type="search" name="search" class="form-control"
+              placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns">
           </div>
           <!-- <button type="submit" class="btn btn-info"> Go! </button> -->
+
+          <div class="filters">
+            <label for="product-type">Product Type:</label>
+            <select name="product-type" id="product-type">
+              <option value="all">All</option>
+              <option value="acne_products">Acne Treatments</option>
+              <option value="aha_products">AHA Products</option>
+              <option value="bha_products">BHA Products</option>
+            </select>
+
+            <label for="skin-type">Skin Type:</label>
+            <select name="skin-type" id="skin-type">
+              <option value="all">All</option>
+              <option value="oily">Oily</option>
+              <option value="dry">Dry</option>
+              <option value="combo">Combo</option>
+            </select>
+
+            <label for="sensitivity">Skin Sensitivity:</label>
+            <select name="sensitivity" id="sensitivity">
+              <option value="all">All</option>
+              <option value="high">High</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
         </form>
       </div>
 
