@@ -178,15 +178,12 @@ def concern_similarity(query, category_info, prod_to_idx, category_to_idx):
         for p in v['products']:
             result[prod_to_idx[p]] += sim
 
-    # for invalid query
-    if sum(result) == 0:
-        return 'invalid query'
             
         # added adjustments
-    for category in relevant_product_types[k]['relevant']:
-        result[product_types[category]] *= 1.5
-    for category in relevant_product_types[k]['irrelevant']:
-        result[product_types[category]] *= 0.1
+        for category in relevant_product_types[k]['relevant']:
+            result[product_types[category]] *= 1.5
+        for category in relevant_product_types[k]['irrelevant']:
+            result[product_types[category]] *= 0.1
     return result
 
 

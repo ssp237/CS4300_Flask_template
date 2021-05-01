@@ -639,7 +639,7 @@
        },
        "If your skin is excessively dry, it may try to compensate for the dryness by overproducing oil. The result? Breakouts.": {
               "terms": {
-                     "acne": 1.0,
+                     "acne": 2.0,
                      "pimple": 1.0,
                      "pimples": 1.0,
                      "breakout": 1.0,
