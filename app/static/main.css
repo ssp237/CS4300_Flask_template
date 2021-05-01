@@ -10,7 +10,7 @@
   }
   
   .global-search * {
-    display:inline-block;
+    /* display:inline-block; */
     margin-bottom:0;
   }
 
@@ -74,14 +74,30 @@
     font-size: 2vh;
   }
 
-  .results-page h4{
-    font-weight: 300;
-    font-size: 2.5vh;
-    margin-bottom: 1.5vh;
-  }
-
   .results .query {
     margin-bottom: 3vh;
+  }
+
+  .results .filters {
+    margin: 2vh;
+  }
+
+  .results .filters select{
+    margin-bottom: 0.75vh;
+    padding: 0.5vh;
+    border: none;
+    border-radius: 0.75vh;
+    background-color: #f1efed;
+    color: #807575;
+  }
+
+  .results .filters .btn-small{
+    border: none;
+    border-radius: 0.75vh;
+    padding: .5vh 2vw;
+    background-color: black;
+    color: #f1efed;
+    font-size: 1.5vh;
   }
 
   .info {
@@ -99,13 +115,56 @@
   }
 
   .product {
+    display: inline-block;
     border-radius: 1vh;
     padding: 3vh;
     background-color: #f1efed;
     width: 100%;
     min-height: 100px;
     margin: 1vh 0vw;
+    color: #090000;
   }
+
+  .product:hover{
+    background-image: linear-gradient(to top,#87BED0,#EFF2F9);
+    text-decoration: none;
+    color: black;
+  }
+
+  .product .name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product .name div{
+    width: fit-content;
+  }
+
+  .product .name h4{
+    /* font-weight: 300; */
+    font-size: 2.5vh;
+    /* margin-bottom: 1.5vh; */
+  }
+
+  .product .name p{
+    font-weight: 300;
+    /* font-size: 2.5vh; */
+    /* margin-bottom: 1.5vh; */
+  }
+
+  .product .price {
+    /* font-weight: 300; */
+    color: #3163E5;
+    right: 0;
+  }
+
+  .product .claims p{
+    margin-top: 1vh;
+    color: #807575;
+    font-size: 1.5vh;
+  }
+
+  
 
   .col {
     text-align: center;
@@ -145,12 +204,10 @@ padding-bottom: 15px; */
 
 .btn{
   background-color: black !important;
-  padding: 0 3vw im !important;
+  padding: 1vh 2vw !important;
   margin-left: 3vw;
   border: none !important;
-  border-radius: 2vh !important;
-  height: 6vh;
-  width: 7vw;
+  border-radius: .75vh !important;
   font-size: 2vh !important;
 }
 

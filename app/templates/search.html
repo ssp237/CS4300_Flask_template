@@ -44,7 +44,7 @@
           <input id="input" type="search" name="search" class="form-control"
             placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns">
         </div>
-        <button type="submit" class="btn btn-info"> Go! </button>
+        <button type="submit" class="btn btn-info"> Search </button>
       </form>
     </div>
 
@@ -60,23 +60,19 @@
         <h1>{{ name }}</h1>
         <p>by {{ netid }}</p>
       </div>
-        <div class="tip">
-            <p>Top tip! {{ tip }}</p>
-            <a href={{ tip_data["source"] }}>Source</a>
-        </div>
+      <div class="tip">
+        <h3>Top Tip!</h3>
+        <p>{{ tip }}</p>
+        <a href={{ tip_data["source"] }}>Source</a>
+
         <div>
-            <h5>Was this helpful?</h5>
-            <form>
-                    <input type="image" id="helpful"
-                           src="../static/thumbs_up.png"
-                           alt="helpful"
-                           height="20">
-                    <input type="image" id="unhelpful"
-                           src="../static/thumbs_down.png"
-                           alt="unhelpful"
-                           height="20">
-            </form>
+          <h5>Was this helpful?</h5>
+          <form>
+            <input type="image" id="helpful" src="../static/thumbs_up.png" alt="helpful" height="20">
+            <input type="image" id="unhelpful" src="../static/thumbs_down.png" alt="unhelpful" height="20">
+          </form>
         </div>
+      </div>
     </div>
 
     <div class="results">
@@ -87,11 +83,12 @@
               placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns"
               value="{{ query }}">
           </div>
-          <!-- <button type="submit" class="btn btn-info"> Go! </button> -->
+          <!-- <button type="submit" class="btn btn-info"> Search </button> -->
 
           <div class="filters">
-            <label for="product-type">Product Type:</label>
+            <!-- <label for="product-type">Product Type:</label> -->
             <select name="product-type" id="product-type">
+              <option value="" disabled selected>Product Type:</option>
               <option value="all">All</option>
               <!-- <option value="acne_products">Acne Treatments</option>
               <option value="aha_products">AHA Products</option>
@@ -101,23 +98,48 @@
               {% endfor %}
             </select>
 
-            <label for="skin-type">Skin Type:</label>
+            <!-- <label for="skin-type">Skin Type:</label> -->
             <select name="skin-type" id="skin-type">
-              <option value="all">All</option>
-              <option value="oily">Oily</option>
-              <option value="dry">Dry</option>
-              <option value="combo">Combo</option>
+              <option value="" disabled selected>Skin Type:</option>
+              <option value="all" {% if skin_type==None %} selected {% endif %}>
+                Any Skin
+              </option>
+              <option value="oily" {% if skin_type=="oily" %} selected {% endif %}>
+                Oily Skin
+              </option>
+              <option value="dry" {% if skin_type=="dry" %} selected {% endif %}>
+                Dry Skin
+              </option>
+              <option value="combo" {% if skin_type=="combo" %} selected {% endif %}>
+                Combo Skin
+              </option>
             </select>
 
-            <label for="sensitivity">Skin Sensitivity:</label>
+            <!-- <label for="sensitivity">Skin Sensitivity:</label> -->
             <select name="sensitivity" id="sensitivity">
-              <option value="all">All</option>
-              <option value="high">High</option>
-              <option value="low">Low</option>
+              <option value="" disabled selected>Sensitivity:</option>
+              <option value="all" {% if sensitivity==None %} selected {% endif %}>
+                Any Sensitivity
+              </option>
+              <option value="high" {% if sensitive %} selected {% endif %}>
+                High Sensitivity
+              </option>
+              <option value="low" {% if sensitive==False %} selected {% endif %}>
+                Low Sensitivity
+              </option>
             </select>
 
-            <input type="submit" id="filterButton" value="Filter">
+            <!-- <label for="price-range">Price Range:</label> -->
+            <select name="price-range" id="price-range">
+              <option value="" disabled selected>Price Range:</option>
+              <option value="all">All</option>
+              {% for p in price_ranges %}
+              <option value="{{ p }}" {% if p==price_range %} selected {% endif %}>{{ p }}</option>
+              {% endfor %}
+            </select>
           </div>
+          <button type="submit" class="btn btn-info"> Search </button>
+
         </form>
       </div>
 
@@ -125,17 +147,24 @@
         <p style="color: #71777b; ">{{output_message}}</p>
         {% for d in data %}
         <br>
-        <div class="product">
-          <div style="display:block;">
-            <h4>{{ d[0] }}</h4>
+        <a class="product" href="{{ d[1]['link'] }}">
+          <div>
+            <div class="name">
+              <div>
+                <h4>{{ d[0] }}</h4>
+              </div>
+              <div>
+                <p>{{ d[1]["brand"] }}</p>
+              </div>
+            </div>
+            <div class="price">
+              <p>${{ d[1]["price"] }}</p>
+            </div>
+            <div class="claims">
+              <p>{{ d[1]["claims"] }}</p>
+            </div>
           </div>
-          <div style="display:block;">
-            <p>by {{ d[1] }}</p>
-          </div>
-          <div style="display:block;">
-            <p>${{ d[2] }}</p>
-          </div>
-        </div>
+        </a>
         {% endfor %}
       </form>
     </div>

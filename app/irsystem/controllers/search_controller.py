@@ -218,9 +218,7 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
     rank_idx = sorted(scores_idx, key = lambda x: (x[0], product_info[idx_to_prod[x[1]]]["num faves"], 
                                             product_info[idx_to_prod[x[1]]]["price"]), reverse = True)
     
-    ranking = list(map(lambda x: (idx_to_prod[x[1]], 
-                        product_info[idx_to_prod[x[1]]]["brand"], 
-                        product_info[idx_to_prod[x[1]]]["price"]), rank_idx))
+    ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]]), rank_idx))
     return ranking
 
 
@@ -267,10 +265,11 @@ def search():
     if product == 'all': product = None
     skin = request.args.get('skin-type')
     if skin == 'all': skin = None
-    budget_in = request.args.get('budget')
+    budget_in = request.args.get('price-range')
     if budget_in == 'all': budget_in = None
     sensitive = request.args.get('sensitivity')
     if sensitive == 'high': sensitive = True
+    elif sensitive == 'low': sensitive = False
     else: sensitive = None
 
     if not query:
@@ -279,12 +278,13 @@ def search():
         tip = ''
         tip_data = {}
     else:
-        output_message = "Here are the products we found for: " + query
         tip = getTip(query, tips_arr, tips_to_ind, terms_to_ind)
         tip_data = tips[tip]
         search_data = rank_products(query, categories, products_to_indices, indices_to_products,
                                     data, category_to_index, product_types, price_ranges, 
                                     product_type=product, skin_type=skin, budget=budget_in, sensitivity=sensitive)
+        output_message = "Top 10 products for: " + query
+        
         if search_data == 'invalid query':
             search_data = []
             output_message = 'Sorry, that query is invalid.'
@@ -292,8 +292,9 @@ def search():
     return render_template('search.html', name=project_name, netid=net_id,
                            output_message=output_message, data=search_data[:10],
                            tip=tip, tip_data=tip_data, 
-                           query=query, product_types=product_types, product_type=product, skin_type=skin,
-                           budget=budget_in, sensitivity=sensitive)
+                           query=query, product_types=product_types, product_type=product, 
+                           price_ranges=price_ranges, price_range=budget_in, 
+                           skin_type=skin, sensitive=sensitive)
 
 # @irsystem.route('/filter', methods=['POST'])
 # def filter():
