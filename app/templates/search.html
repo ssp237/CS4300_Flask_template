@@ -1,5 +1,29 @@
 <html>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+    $(function() {
+        $('input#helpful').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/increase',
+                function(data) {
+                    //do nothing
+                });
+            return false;
+        });
+    });
+    $(function() {
+        $('input#unhelpful').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/decrease',
+                function(data) {
+                    //do nothing
+                });
+            return false;
+        });
+    });
+</script>
+
 <head>
   <link rel="stylesheet" href="/static/main.css">
   <link rel="stylesheet" href="/static/bootstrap.min.css">
@@ -36,6 +60,23 @@
         <h1>{{ name }}</h1>
         <p>by {{ netid }}</p>
       </div>
+        <div class="tip">
+            <p>Top tip! {{ tip }}</p>
+            <a href={{ tip_data["source"] }}>Source</a>
+        </div>
+        <div>
+            <h5>Was this helpful?</h5>
+            <form>
+                    <input type="image" id="helpful"
+                           src="../static/thumbs_up.png"
+                           alt="helpful"
+                           height="20">
+                    <input type="image" id="unhelpful"
+                           src="../static/thumbs_down.png"
+                           alt="unhelpful"
+                           height="20">
+            </form>
+        </div>
     </div>
 
     <div class="results">
