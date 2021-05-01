@@ -53,6 +53,7 @@
     /* background-image: linear-gradient(to top,#46150c,#942b1d); */
     border-radius: 10px;;
     text-align: center;
+    margin-bottom: 2vh;
   }
 
   .query p {
