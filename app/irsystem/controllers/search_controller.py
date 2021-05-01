@@ -8,7 +8,8 @@ import random
 
 project_name = "Pocket Esthetician"
 net_id = "Em Gregoire: erg92 \nKriti Sinha: ks867 \nRaheel Yanful: ray37 \nShan Parikh: ssp237"
-
+tip = ''
+query = {}
 
 def cos_sim(c, tfidf_mat, category_to_idx):
     """Returns the cosine similarity of the query and a concern list.
@@ -131,8 +132,31 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
     return ranking
 
 
+@irsystem.route('/increase')
+def inc_query():
+    """
+    Increase the weight of the current query in the last returned tip
+    """
+    if not query:
+        return "nothing"
+    print("hello world")
+    return "nothing"
+
+
+@irsystem.route('/decrease')
+def dec_query():
+    """
+    Decrease the weight of the current query in the last returned tip
+    """
+    if not query:
+        return "nothing"
+    print("hello world (dec)")
+    return "nothing"
+
+
 @irsystem.route('/', methods=['GET'])
 def search():
+    global tip, query
     query = request.args.get('search')
     if not query:
         search_data = []
@@ -145,7 +169,6 @@ def search():
                                     indices_to_products, data, category_to_index)
         tip = getTip(query, tips_arr, tips_to_ind, terms_to_ind)
         tip_data = tips[tip]
-        print(tip)
 
     return render_template('search.html', name=project_name, netid=net_id,
                            output_message=output_message, data=search_data[:10],
