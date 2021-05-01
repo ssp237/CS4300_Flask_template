@@ -40,10 +40,11 @@
 
     <div class="results">
       <div class="query">
-        <form class="form-inline global-search" method="POST" action="">
+        <form class="form-inline global-search" method="POST" action="{{ url_for('irsystem.filter') }}">
           <div class="form-group">
             <input id="input" type="search" name="search" class="form-control"
-              placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns">
+              placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns"
+              value="{{ query }}">
           </div>
           <!-- <button type="submit" class="btn btn-info"> Go! </button> -->
 
@@ -70,6 +71,8 @@
               <option value="high">High</option>
               <option value="low">Low</option>
             </select>
+
+            <input type="submit" id="filterButton" value="Filter">
           </div>
         </form>
       </div>
