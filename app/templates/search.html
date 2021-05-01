@@ -3,7 +3,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type=text/javascript>
     $(function() {
-        $('a#helpful').on('click', function(e) {
+        $('input#helpful').on('click', function(e) {
             e.preventDefault()
             $.getJSON('/increase',
                 function(data) {
@@ -13,7 +13,7 @@
         });
     });
     $(function() {
-        $('a#unhelpful').on('click', function(e) {
+        $('input#unhelpful').on('click', function(e) {
             e.preventDefault()
             $.getJSON('/decrease',
                 function(data) {
@@ -67,11 +67,14 @@
         <div>
             <h5>Was this helpful?</h5>
             <form>
-                <div class="container">
-{#                    <img src="../../img/thumbs_up.png" alt="thumb">#}
-                    <a href=# id=helpful><button class="btn"></button></a>
-                </div>
-                <a href=# id=unhelpful><button class="btn btn-default">"Unlike"</button></a>
+                    <input type="image" id="helpful"
+                           src="../static/thumbs_up.png"
+                           alt="helpful"
+                           height="20">
+                    <input type="image" id="unhelpful"
+                           src="../static/thumbs_down.png"
+                           alt="unhelpful"
+                           height="20">
             </form>
         </div>
     </div>

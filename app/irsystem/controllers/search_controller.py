@@ -10,6 +10,8 @@ project_name = "Pocket Esthetician"
 net_id = "Em Gregoire: erg92 \nKriti Sinha: ks867 \nRaheel Yanful: ray37 \nShan Parikh: ssp237"
 tip = ''
 query = {}
+changed_mat = False
+
 
 def cos_sim(c, tfidf_mat, category_to_idx):
     """Returns the cosine similarity of the query and a concern list.
@@ -137,9 +139,14 @@ def inc_query():
     """
     Increase the weight of the current query in the last returned tip
     """
-    if not query:
+    global changed_mat
+    if not query or changed_mat:
         return "nothing"
-    print("hello world")
+    updateTip(query, tips_arr, tips_to_ind[tip], terms_to_ind, True)
+    numpyToDic(tips_arr, tips_to_ind, terms_to_ind, tips)
+    with open(tip_file, "w") as file:
+        json.dump(tips, file, indent=7)
+    changed_mat = True
     return "nothing"
 
 
@@ -148,16 +155,22 @@ def dec_query():
     """
     Decrease the weight of the current query in the last returned tip
     """
-    if not query:
+    global changed_mat
+    if not query or changed_mat:
         return "nothing"
-    print("hello world (dec)")
+    updateTip(query, tips_arr, tips_to_ind[tip], terms_to_ind, False)
+    numpyToDic(tips_arr, tips_to_ind, terms_to_ind, tips)
+    with open(tip_file, "w") as file:
+        json.dump(tips, file, indent=7)
+    changed_mat = True
     return "nothing"
 
 
 @irsystem.route('/', methods=['GET'])
 def search():
-    global tip, query
+    global tip, query, changed_mat
     query = request.args.get('search')
+    changed_mat = False
     if not query:
         search_data = []
         output_message = ''

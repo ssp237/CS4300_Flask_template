@@ -98,16 +98,21 @@ def numpyToDic(arr, tip_ind, key_ind, dic):
                 dic[tip_rev[i]]["terms"][key_rev[j]] = arr[i, j]
 
 
-with open("finaldata.json", "r") as f:
+data_file = "finaldata.json"
+ingredients_file = "ingredients.json"
+concerns_file = "concerns.json"
+tip_file = "skincare_tips.json"
+
+with open(data_file, "r") as f:
     data = json.loads("\n".join(f.readlines()))
 
-with open("ingredients.json", "r") as f:
+with open(ingredients_file, "r") as f:
     u_ingredients = json.loads("\n".join(f.readlines()))
 
-with open("concerns.json", "r") as f:
+with open(concerns_file, "r") as f:
     u_concerns = json.loads("\n".join(f.readlines()))
 
-with open("skincare_tips.json", "r") as f:
+with open(tip_file, "r") as f:
     tips = json.loads("\n".join(f.readlines()))
 
 # Mild preprocessing (should eventually move to data scraping step)
