@@ -6,8 +6,8 @@ from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import random
 
 
-project_name = "Pocket Esthetician"
-net_id = "Em Gregoire: erg92 \nKriti Sinha: ks867 \nRaheel Yanful: ray37 \nShan Parikh: ssp237"
+project_name = ["Pocket", "Esthetician"]
+net_id = "Em (erg92), Kriti(ks867), Raheel (ray37), Shan (ssp237)"
 tip = ''
 query = {}
 changed_mat = False

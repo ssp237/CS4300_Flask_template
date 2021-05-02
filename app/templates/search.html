@@ -27,26 +27,38 @@
 <head>
   <link rel="stylesheet" href="/static/main.css">
   <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
   <div class="{{ 'results-page' if data else 'header' }}">
     <div class="{{ 'info' if data else '' }}">
       <div class="title">
-        <h1>{{ name }}</h1>
-        <p>by {{ netid }}</p>
+        <h1>
+          <span style="font-weight: 900;">{{ name[0] }}</span>
+          <span style="font-family: Brush Script MT, Brush Script Std, cursive;">{{ name[1] }}</span>
+        </h1>
+        <p style="font-size: 1.5vh;">by {{ netid }}</p>
       </div>
       {% if data %}
       <div class="tip">
         <h3>Top Tip!</h3>
         <p>{{ tip }}</p>
-        <a href={{ tip_data["source"] }}>Source</a>
+        <a href={{ tip_data["source"] }}>Learn More</a>
 
-        <div>
-          <h5>Was this helpful?</h5>
+        <div class="feedback">
+          <p>Was this helpful?</p>
           <form>
-            <input type="image" id="helpful" src="../static/thumbs_up.png" alt="helpful" height="20">
-            <input type="image" id="unhelpful" src="../static/thumbs_down.png" alt="unhelpful" height="20">
+            <!-- <input type="image" id="helpful" src="../static/thumbs_up.png" alt="helpful" height="20">
+            <input type="image" id="unhelpful" src="../static/thumbs_down.png" alt="unhelpful" height="20"> -->
+            <span class="material-icons" id="unhelpful">
+              thumb_up{{ '_off_alt'if True}}
+            </span>
+            <span class="material-icons" id="helpful">
+              thumb_down{{ '_off_alt'if True}}
+            </span>
           </form>
         </div>
       </div>
