@@ -30,90 +30,13 @@
 </head>
 
 <body>
-
-  {% if not data %}
-  <div class="header">
-    <div class="title">
-      <h1>{{ name }}</h1>
-      <p>by {{ netid }}</p>
-    </div>
-
-    <div class="query">
-      <form class="form-inline global-search">
-        <div class="form-group">
-          <input id="input" type="search" name="search" class="form-control"
-            placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns">
-        </div>
-
-        <div class="filters">
-          <!-- <label for="product-type">Product Type:</label> -->
-          <select name="product-type" id="product-type">
-            <option value="" disabled selected>Product Type:</option>
-            <option value="all" {% if product_type==None %} selected {% endif %}>All Products</option>
-            <!-- <option value="acne_products">Acne Treatments</option>
-              <option value="aha_products">AHA Products</option>
-              <option value="bha_products">BHA Products</option> -->
-            {% for p in product_types %}
-            <option value="{{ p }}" {% if p==product_type %} selected {% endif %}>{{ p }}</option>
-            {% endfor %}
-          </select>
-
-          <!-- <label for="skin-type">Skin Type:</label> -->
-          <select name="skin-type" id="skin-type">
-            <option value="" disabled selected>Skin Type:</option>
-            <option value="all" {% if skin_type==None %} selected {% endif %}>
-              Any Skin
-            </option>
-            <option value="oily" {% if skin_type=="oily" %} selected {% endif %}>
-              Oily Skin
-            </option>
-            <option value="dry" {% if skin_type=="dry" %} selected {% endif %}>
-              Dry Skin
-            </option>
-            <option value="combo" {% if skin_type=="combo" %} selected {% endif %}>
-              Combo Skin
-            </option>
-          </select>
-
-          <!-- <label for="sensitivity">Skin Sensitivity:</label> -->
-          <select name="sensitivity" id="sensitivity">
-            <option value="" disabled selected>Sensitivity:</option>
-            <option value="all" {% if sensitive==None %} selected {% endif %}>
-              Any Sensitivity
-            </option>
-            <option value="high" {% if sensitive %} selected {% endif %}>
-              High Sensitivity
-            </option>
-            <option value="low" {% if sensitive==False %} selected {% endif %}>
-              Low Sensitivity
-            </option>
-          </select>
-
-          <!-- <label for="price-range">Price Range:</label> -->
-          <select name="price-range" id="price-range">
-            <option value="" disabled selected>Price Range:</option>
-            <option value="all" {% if price_range==None %} selected {% endif %}>Any Price</option>
-            {% for p in price_ranges %}
-            <option value="{{ p }}" {% if p==price_range %} selected {% endif %}>{{ p }}</option>
-            {% endfor %}
-          </select>
-        </div>
-        <button type="submit" class="btn btn-info"> Search </button>
-      </form>
-    </div>
-
-    <!-- <a href=""> Advanced Esthetician </a> -->
-  </div>
-  {% endif %}
-
-
-  {% if data %}
-  <div class="results-page">
-    <div class="info">
+  <div class="{{ 'results-page' if data else 'header' }}">
+    <div class="{{ 'info' if data else '' }}">
       <div class="title">
         <h1>{{ name }}</h1>
         <p>by {{ netid }}</p>
       </div>
+      {% if data %}
       <div class="tip">
         <h3>Top Tip!</h3>
         <p>{{ tip }}</p>
@@ -127,15 +50,16 @@
           </form>
         </div>
       </div>
+      {% endif %}
     </div>
 
-    <div class="results">
+    <div class="{{ 'results' if data else '' }}">
       <div class="query">
         <form class="form-inline global-search">
           <div class="form-group">
             <input id="input" type="search" name="search" class="form-control"
-              placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns"
-              value="{{ query }}">
+              placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns" {% if query %}
+              value="{{ query }}" {% endif %}>
           </div>
           <!-- <button type="submit" class="btn btn-info"> Search </button> -->
 
@@ -197,6 +121,7 @@
         </form>
       </div>
 
+      {% if data %}
       <form class="form-inline global-search">
         <p style="color: #71777b; ">{{output_message}}</p>
         {% for d in data %}
@@ -222,8 +147,8 @@
         {% endfor %}
       </form>
     </div>
+    {% endif %}
   </div>
-  {% endif %}
 
 
 </body>
