@@ -78,11 +78,11 @@
     margin-bottom: 3vh;
   }
 
-  .results .filters {
+  .filters {
     margin: 2vh;
   }
 
-  .results .filters select{
+  .filters select{
     margin-bottom: 0.75vh;
     padding: 0.5vh;
     border: none;
@@ -91,7 +91,7 @@
     color: #807575;
   }
 
-  .results .filters .btn-small{
+  .filters .btn-small{
     border: none;
     border-radius: 0.75vh;
     padding: .5vh 2vw;
