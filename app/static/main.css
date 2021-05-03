@@ -146,13 +146,20 @@
     background-color: white;
   }
 
+  .products {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    width: 100%;
+  }
+
   .product {
     display: inline-block;
     border-radius: 1vh;
     padding: 3vh;
     background-color: #f1efed;
-    width: 100%;
-    min-height: 100px;
+    width: 49%;
+    /* min-height: 100px; */
     margin: 1vh 0vw;
     color: #090000;
   }
@@ -178,20 +185,19 @@
     /* margin-bottom: 1.5vh; */
   }
 
-  .product .name p{
-    font-weight: 300;
-    /* font-size: 2.5vh; */
-    /* margin-bottom: 1.5vh; */
+  .product .brand-score{
+    display: flex;
+    margin-top: 2vh;
   }
 
-  .product .price {
+  .product .price h5{
     /* font-weight: 300; */
-    color: #3163E5;
-    right: 0;
+    font-size: 2vh;
+    color: #386A98;
   }
 
-  .product .claims p{
-    margin-top: 1vh;
+  .product p{
+    margin-top: .5vh;
     color: #807575;
     font-size: 1.5vh;
   }

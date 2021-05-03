@@ -136,27 +136,35 @@
       {% if data %}
       <form class="form-inline global-search">
         <p style="color: #71777b; ">{{output_message}}</p>
-        {% for d in data %}
-        <br>
-        <a class="product" href="{{ d[1]['link'] }}">
-          <div>
-            <div class="name">
-              <div>
+        <div class="products">
+          {% for d in data %}
+          <br>
+          <a class="product" href="{{ d[1]['link'] }}">
+            <div>
+              <div class="name">
                 <h4>{{ d[0] }}</h4>
               </div>
-              <div>
-                <p>{{ d[1]["brand"] }}</p>
+              <div class="price">
+                <h5>${{ d[1]["price"] }}</h5>
+              </div>
+              <div class="brand-score">
+                <div>
+                  <h5>Brand</h5>
+                  <p>{{ d[1]["brand"] }}</p>
+                </div>
+                <div style="margin-left: 3vw;">
+                  <h5>Score</h5>
+                  <p>{{ d[2] }}</p>
+                </div>
+              </div>
+              <div class="claims">
+                <h5>Claims</h5>
+                <p>{{ d[1]["claims"] }}</p>
               </div>
             </div>
-            <div class="price">
-              <p>${{ d[1]["price"] }}</p>
-            </div>
-            <div class="claims">
-              <p>{{ d[1]["claims"] }}</p>
-            </div>
-          </div>
-        </a>
-        {% endfor %}
+          </a>
+          {% endfor %}
+        </div>
       </form>
     </div>
     {% endif %}
