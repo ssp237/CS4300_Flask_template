@@ -214,11 +214,12 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
     if product_type != None:
         scores[np.invert(product_types[product_type])] = 0
     
+    len_rank = np.count_nonzero(scores)
     scores_idx = [(val,prod) for prod, val in enumerate(scores)]
     rank_idx = sorted(scores_idx, key = lambda x: (x[0], product_info[idx_to_prod[x[1]]]["num faves"], 
                                             product_info[idx_to_prod[x[1]]]["price"]), reverse = True)
     
-    ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], x[0]), rank_idx))
+    ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], x[0]), rank_idx))[:len_rank]
     return ranking
 
 
@@ -283,11 +284,16 @@ def search():
         search_data = rank_products(query, categories, products_to_indices, indices_to_products,
                                     data, category_to_index, product_types, price_ranges, 
                                     product_type=product, skin_type=skin, budget=budget_in, sensitivity=sensitive)
-        output_message = "Top 10 products for: " + query
+        output_message = "Top " + str(min(len(search_data), 10)) + " products for: " + query
         
+        # invalid concerns query
         if search_data == 'invalid query':
             search_data = []
-            output_message = 'Sorry, that query is invalid.'
+            output_message = 'Sorry, that query is invalid. Please try a different search!'
+        
+        # no results (due to advanced search filtering)
+        elif len(search_data) == 0:
+            output_message = 'Sorry, there are no results matching your preferences.'
 
     return render_template('search.html', name=project_name, netid=net_id,
                            output_message=output_message, data=search_data[:10],

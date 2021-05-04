@@ -120,7 +120,6 @@ with open("relevant_types.json", "r") as f:
 with open(tip_file, "r") as f:
     tips = json.loads("\n".join(f.readlines()))
 
-# Mild preprocessing (should eventually move to data scraping step)
 
 for _, v in data.items():
     i_string = v['ingredients']
@@ -185,9 +184,9 @@ def create_price_ranges():
             price_ranges['under $15'][products_to_indices[k]] = True
         elif v['price'] < 30:
             price_ranges['$15-30'][products_to_indices[k]] = True
-        elif v['price'] < 30:
+        elif v['price'] < 50:
             price_ranges['$30-50'][products_to_indices[k]] = True
-        elif v['price'] < 30:
+        elif v['price'] < 75:
             price_ranges['$50-75'][products_to_indices[k]] = True
         else :
             price_ranges['$75+'][products_to_indices[k]] = True
