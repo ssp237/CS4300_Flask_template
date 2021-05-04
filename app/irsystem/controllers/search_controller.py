@@ -59,6 +59,31 @@ def adjust_skin_type(ranking, s_type):
     return ranking
 
 
+def adjust_rating(ranking, ratings):
+    """Returns the ranking after adjusting scores based on product ratings.
+    
+    Params: {ranking: Numpy Array,
+             ratings: Numpy Array}
+    Returns: Numpy Array 
+    """
+    r1 = ratings == 1
+    ranking[r1] *= 0.1
+    
+    r2 = ratings == 2
+    ranking[r2] *= 0.25
+    
+    r3 = ratings == 3
+    ranking[r3] *= 0.5
+    
+    r4 = ratings == 4
+    ranking[r4] *= 1.25
+    
+    r5 = ratings == 5
+    ranking[r5] *= 1.5
+    
+    return ranking
+
+
 def cos_sim(c, tfidf_mat, category_to_idx):
     """Returns the cosine similarity of the query and a concern list.
     
@@ -188,7 +213,7 @@ def concern_similarity(query, category_info, prod_to_idx, category_to_idx):
 
 
 def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, category_to_idx,
-                 product_types, price_ranges, product_type=None, skin_type=None, budget=None, sensitivity=None):
+                 product_types, price_ranges, ratings, product_type=None, skin_type=None, budget=None, sensitivity=None):
     """ Returns a ranked list of products, with the most relevant at index 0.
         
         Params: {query: (user input) String,
@@ -209,6 +234,7 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
         scores = adjust_sensitivity(scores, sensitivity)
     
     # strict filters
+    scores = adjust_rating(scores, ratings)
     if budget != None:
         scores[np.invert(price_ranges[budget])] = 0     
     if product_type != None:
@@ -216,10 +242,10 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
     
     len_rank = np.count_nonzero(scores)
     scores_idx = [(val,prod) for prod, val in enumerate(scores)]
-    rank_idx = sorted(scores_idx, key = lambda x: (x[0], product_info[idx_to_prod[x[1]]]["num faves"], 
-                                            product_info[idx_to_prod[x[1]]]["price"]), reverse = True)
+    rank_idx = sorted(scores_idx, key = lambda x: (x[0], ratings[x[1]], product_info[idx_to_prod[x[1]]]["price"],
+                                                  product_info[idx_to_prod[x[1]]]["num faves"]), reverse = True)
     
-    ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], x[0]), rank_idx))[:len_rank]
+    ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], ratings[x[1]]), rank_idx))[:len_rank]
     return ranking
 
 
@@ -282,7 +308,7 @@ def search():
         tip = getTip(query, tips_arr, tips_to_ind, terms_to_ind)
         tip_data = tips[tip]
         search_data = rank_products(query, categories, products_to_indices, indices_to_products,
-                                    data, category_to_index, product_types, price_ranges, 
+                                    data, category_to_index, product_types, price_ranges, ratings, 
                                     product_type=product, skin_type=skin, budget=budget_in, sensitivity=sensitive)
         output_message = "Top " + str(min(len(search_data), 10)) + " products for: " + query
         
