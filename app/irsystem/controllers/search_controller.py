@@ -38,17 +38,17 @@ def adjust_skin_type(ranking, s_type):
     Returns: Numpy Array 
     """
     if s_type == 'oily':
-        ranking[product_types['face_oil_products']] *= 0.5
+        ranking[product_types['Face Oils']] *= 0.5
             
         for prod in categories['absorbent/mattifier']['products']:
             ranking[products_to_indices[prod]] *= 1.5
-        ranking[product_types['bha_products']] *= 1.5
-        ranking[product_types['oil_absorbing_products']] *= 1.5
+        ranking[product_types['BHA Products']] *= 1.5
+        ranking[product_types['Oil Absorbing Products']] *= 1.5
     
     elif s_type == 'dry':
         for prod in categories['absorbent/mattifier']['products']:
             ranking[products_to_indices[prod]] *= 0.5
-        ranking[product_types['oil_absorbing_products']] *= 0.5
+        ranking[product_types['Oil Absorbing Products']] *= 0.5
             
         for prod in categories['soothing']['products']:
             ranking[products_to_indices[prod]] *= 1.5
@@ -206,9 +206,9 @@ def concern_similarity(query, category_info, prod_to_idx, category_to_idx):
             
         # added adjustments
         for category in relevant_product_types[k]['relevant']:
-            result[product_types[category]] *= 1.5
+            result[product_types[product_file_to_type[category]]] *= 1.5
         for category in relevant_product_types[k]['irrelevant']:
-            result[product_types[category]] *= 0.1
+            result[product_types[product_file_to_type[category]]] *= 0.1
     return result
 
 
