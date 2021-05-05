@@ -292,8 +292,16 @@ def search():
     if product == 'all': product = None
     skin = request.args.get('skin-type')
     if skin == 'all': skin = None
+
     budget_in = request.args.get('price-range')
     if budget_in == 'all': budget_in = None
+
+    price_min = request.args.get('price_min')
+    if price_min == None: price_min = 0
+    price_max = request.args.get('price_max')
+    if price_max == None: price_max = 1000
+
+
     sensitive = request.args.get('sensitivity')
     if sensitive == 'high': sensitive = True
     elif sensitive == 'low': sensitive = False
@@ -326,7 +334,8 @@ def search():
                            tip=tip, tip_data=tip_data, 
                            query=query, product_types=product_types, product_type=product, 
                            price_ranges=price_ranges, price_range=budget_in, 
-                           skin_type=skin, sensitive=sensitive)
+                           skin_type=skin, sensitive=sensitive, 
+                           price_min=price_min, price_max=price_max)
 
 # @irsystem.route('/filter', methods=['POST'])
 # def filter():

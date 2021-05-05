@@ -118,16 +118,21 @@
                 Low Sensitivity
               </option>
             </select>
-
-            <!-- <label for="price-range">Price Range:</label> -->
-            <select name="price-range" id="price-range">
-              <option value="" disabled selected>Price Range:</option>
-              <option value="all" {% if price_range==None %} selected {% endif %}>Any Price</option>
-              {% for p in price_ranges %}
-              <option value="{{ p }}" {% if p==price_range %} selected {% endif %}>{{ p }}</option>
-              {% endfor %}
-            </select>
           </div>
+
+          <div class="price-filter">
+            <!-- <label for="price-range">Price Range:</label> -->
+            <p style="font-size: 14px; font-weight:bold;">Price Range</p>
+
+            <div class="slider">
+              From
+              <input id="input" name="price-min" placeholder="0" {% if price_min %} value="{{ price_min }}" {% endif %}>
+              to
+              <input id="input" name="price-max" placeholder="1000" {% if price_max %} value="{{ price_max }}" {% endif
+                %}>
+            </div>
+          </div>
+
           <button type="submit" class="btn btn-info"> Search </button>
 
         </form>
