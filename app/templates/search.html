@@ -69,7 +69,7 @@
       <div class="query">
         <form class="form-inline global-search">
           <div class="form-group">
-            <input id="input" type="search" name="search" class="form-control"
+            <input id="query" type="search" name="search" class="form-control"
               placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns" {% if query %}
               value="{{ query }}" {% endif %}>
           </div>
@@ -118,16 +118,25 @@
                 Low Sensitivity
               </option>
             </select>
-
-            <!-- <label for="price-range">Price Range:</label> -->
-            <select name="price-range" id="price-range">
-              <option value="" disabled selected>Price Range:</option>
-              <option value="all" {% if price_range==None %} selected {% endif %}>Any Price</option>
-              {% for p in price_ranges %}
-              <option value="{{ p }}" {% if p==price_range %} selected {% endif %}>{{ p }}</option>
-              {% endfor %}
-            </select>
           </div>
+
+          <div class="price-filter">
+            <!-- <label for="price-range">Price Range:</label> -->
+            <p style="font-size: 14px; font-weight:bold;">Price Range</p>
+
+            <div class="content">
+              From
+              $ <input id="price-min" type="number" name="price-min" placeholder="0" value="{{ price_min }}">
+              to
+              $ <input id="price-max" type="number" name="price-max" placeholder="1000" value="{{ price_max }}">
+
+              <!-- <div class="slider">
+                <input type="range" min="0" max="1000" value="{{ price_min }}" id="lower">
+                <input type="range" min="0" max="1000" value="{{ price_max }}" id="upper">
+              </div> -->
+            </div>
+          </div>
+
           <button type="submit" class="btn btn-info"> Search </button>
 
         </form>
