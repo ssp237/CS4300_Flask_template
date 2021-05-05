@@ -245,7 +245,7 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
     rank_idx = sorted(scores_idx, key = lambda x: (x[0], ratings[x[1]], product_info[idx_to_prod[x[1]]]["price"],
                                                   product_info[idx_to_prod[x[1]]]["num faves"]), reverse = True)
     
-    ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], ratings[x[1]]), rank_idx))[:len_rank]
+    ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], int(ratings[x[1]])), rank_idx))[:len_rank]
     return ranking
 
 
