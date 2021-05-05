@@ -128,6 +128,9 @@ with open("reviews.json", "r") as f:
 with open("product_type_names.json", "r") as f:
     product_file_to_type = json.loads("\n".join(f.readlines()))
 
+with open("imagelinks.json", "r") as f:
+    imagelinks = json.loads("\n".join(f.readlines()))
+
 for _, v in data.items():
     i_string = v['ingredients']
     if i_string[-1] == '.': i_string = i_string[:len(i_string) - 1]
