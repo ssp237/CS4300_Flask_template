@@ -275,7 +275,7 @@ def get_data(product_type=None, budget=(0, 1000)):
     i = 0
     p_to_ind, ind_to_p = {}, {}
     query_data = Product.query.with_entities(
-        Product.name, Product.num faves,
+        Product.name, Product.num_faves,
         Product.claims, Product.ingredients, Product.ptype).filter(
         and_(Product.price >= budget[0], Product.price <= budget[1])
     ).all()
@@ -380,7 +380,7 @@ def search():
         new_data, p_to_ind, ind_to_p, new_rates, new_p_types = get_data(product_type = product, budget=(price_min, price_max))
         search_data = rank_products(query, categories, p_to_ind, ind_to_p,
                                     new_data, category_to_index, new_p_types, new_rates,
-                                    product_type=product, skin_type=skin, price_min=price_min, price_max=price_max,
+                                    product_type=product, skin_type=skin,
                                     sensitivity=sensitive)
         output_message = "Top " + str(min(len(search_data), 10)) + " products for: " + query
         

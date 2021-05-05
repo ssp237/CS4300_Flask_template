@@ -148,9 +148,9 @@ for k, v in u_concerns.items():
     categories[k.lower()] = d
 
 # Construct auxiliary data structures
-# num_products = len(data)
+num_products = len(data)
 category_to_index = {name: index for index, name in enumerate(categories)}
-# products_to_indices = {k: v for k, v in zip(data.keys(), range(num_products))}
+products_to_indices = {k: v for k, v in zip(data.keys(), range(num_products))}
 # indices_to_products = {v: k for k, v in products_to_indices.items()}
 
 tips_arr, tips_to_ind, terms_to_ind = dicToNumpy(tips)
