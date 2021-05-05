@@ -104,7 +104,6 @@ data_file = "finaldata.json"
 ingredients_file = "ingredients.json"
 concerns_file = "concerns.json"
 tip_file = "skincare_tips.json"
-reviews_file = "reviews.json"
 
 with open(data_file, "r") as f:
     data = json.loads("\n".join(f.readlines()))
@@ -121,9 +120,11 @@ with open("relevant_types.json", "r") as f:
 with open(tip_file, "r") as f:
     tips = json.loads("\n".join(f.readlines()))
 
-with open(reviews_file, "r") as f:
+with open("reviews.json", "r") as f:
     reviews_lst = json.loads("\n".join(f.readlines()))    
 
+with open("product_type_names.json", "r") as f:
+    product_file_to_type = json.loads("\n".join(f.readlines()))
 
 for _, v in data.items():
     i_string = v['ingredients']
@@ -161,7 +162,6 @@ def create_product_types_dict():
         print('can\'t read')  
     
     for p_file in product_files:
-        name = p_file[22:-5]
         with open(p_file) as json_file:
             data = json.load(json_file)
         p_arr = np.full(num_products, False)
@@ -169,7 +169,7 @@ def create_product_types_dict():
             if p not in products_to_indices.keys():
                 continue
             p_arr[products_to_indices[p]] = True
-        product_types[name] = p_arr
+        product_types[product_file_to_type[p_file[22:-5]]] = p_arr
     
     return product_types
 
