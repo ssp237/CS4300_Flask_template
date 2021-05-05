@@ -215,7 +215,7 @@ def concern_similarity(query, category_info, prod_to_idx, category_to_idx, produ
 
 
 def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, category_to_idx,
-                 product_types, price_ranges, ratings, product_type=None, skin_type=None, price_min=None, price_max=None,
+                 product_types, ratings, product_type=None, skin_type=None, price_min=None, price_max=None,
                   sensitivity=None):
     """ Returns a ranked list of products, with the most relevant at index 0.
         
@@ -373,7 +373,7 @@ def search():
         tip_data = tips[tip]
         new_data, p_to_ind, ind_to_p, new_rates, new_p_types = get_data(budget=(5, 10))
         search_data = rank_products(query, categories, p_to_ind, ind_to_p,
-                                    new_data, category_to_index, new_p_types, price_ranges, new_rates,
+                                    new_data, category_to_index, new_p_types, new_rates,
                                     product_type=product, skin_type=skin, price_min=price_min, price_max=price_max,
                                     sensitivity=sensitive)
         output_message = "Top " + str(min(len(search_data), 10)) + " products for: " + query
@@ -398,9 +398,8 @@ def search():
                            output_message=output_message, data=search_data,
                            tip=tip, tip_data=tip_data, 
                            query=query, product_types=product_types, product_type=product, 
-                           price_ranges=price_ranges, price_range=budget_in, 
-                           skin_type=skin, sensitive=sensitive, 
-                           price_min=price_min, price_max=price_max)
+                           price_min=price_min, price_max=price_max,
+                           skin_type=skin, sensitive=sensitive)
 
 # @irsystem.route('/filter', methods=['POST'])
 # def filter():
