@@ -9,7 +9,7 @@ class Product(Base):
 
     id = db.Column(db.Integer, primary_key=False)
     name           = db.Column(db.String(128), nullable=False, primary_key=True, unique=True)
-    link           = db.Column(db.String(256), nullable=False)
+    link           = db.Column(db.String(512), nullable=False)
     brand          = db.Column(db.String(128), nullable=False)
     num_faves      = db.Column(db.Integer, nullable=False)
     claims         = db.Column(db.String(2048), nullable=False)
