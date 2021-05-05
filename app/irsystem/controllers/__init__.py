@@ -178,29 +178,11 @@ def create_product_types_dict():
     return product_types
 
 
-def create_price_ranges():
-    """Returns a dictionary to map price ranges to Boolean arrays 
-    (True if index corresponds to a product within the budget).
-    
-    Params: {}
-    Returns: (String -> Numpy Array) Dict 
-    """
-    price_ranges = dict([('under $15', np.full(num_products, False)), ('$15-30', np.full(num_products, False)),
-                         ('$30-50', np.full(num_products, False)), ('$50-75', np.full(num_products, False)),
-                         ('$75+', np.full(num_products, False))])
-    for k, v in data.items():
-        if v['price'] < 15:
-            price_ranges['under $15'][products_to_indices[k]] = True
-        elif v['price'] < 30:
-            price_ranges['$15-30'][products_to_indices[k]] = True
-        elif v['price'] < 50:
-            price_ranges['$30-50'][products_to_indices[k]] = True
-        elif v['price'] < 75:
-            price_ranges['$50-75'][products_to_indices[k]] = True
-        else:
-            price_ranges['$75+'][products_to_indices[k]] = True
-
-    return price_ranges
+def create_prices():
+    prices = np.array(np.ndarray.flatten(np.indices((1,num_products))[1]), dtype=float)
+    for x in prices:
+        prices[int(x)] = data[indices_to_products[int(x)]]['price']
+    return prices
 
 
 def create_ratings():
@@ -218,7 +200,7 @@ def create_ratings():
 
 
 product_types = create_product_types_dict()
-price_ranges = create_price_ranges()
+prices = create_prices()
 ratings = create_ratings()
 
 # Add to db

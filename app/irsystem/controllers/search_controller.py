@@ -215,7 +215,8 @@ def concern_similarity(query, category_info, prod_to_idx, category_to_idx, produ
 
 
 def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, category_to_idx,
-                 product_types, price_ranges, ratings, product_type=None, skin_type=None, budget=None, sensitivity=None):
+                 product_types, price_ranges, ratings, product_type=None, skin_type=None, price_min=None, price_max=None,
+                  sensitivity=None):
     """ Returns a ranked list of products, with the most relevant at index 0.
         
         Params: {query: (user input) String,
@@ -230,15 +231,19 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
     if sum(scores) == 0: return 'invalid query'
     
     # ranking adjustments
+    scores = adjust_rating(scores, ratings)
     if skin_type is not None:
         scores = adjust_skin_type(scores, skin_type)
     if sensitivity is not None:
         scores = adjust_sensitivity(scores, sensitivity)
     
     # strict filters
-    scores = adjust_rating(scores, ratings)
-    if budget is not None:
-        scores[np.invert(price_ranges[budget])] = 0     
+    if price_min is not None:
+        m1 = prices < price_min
+        scores[m1] = 0
+    if price_max is not None:
+        m2 = prices > price_max
+        scores[m2] = 0
     if product_type is not None:
         scores[np.invert(product_types[product_type])] = 0
     
@@ -345,9 +350,6 @@ def search():
     skin = request.args.get('skin-type')
     if skin == 'all': skin = None
 
-    budget_in = request.args.get('price-range')
-    if budget_in == 'all': budget_in = None
-
     price_min = 0
     # int(request.args.get('price-min'))
     if price_min < 0: price_min = 0
@@ -372,7 +374,8 @@ def search():
         new_data, p_to_ind, ind_to_p, new_rates, new_p_types = get_data(budget=(5, 10))
         search_data = rank_products(query, categories, p_to_ind, ind_to_p,
                                     new_data, category_to_index, new_p_types, price_ranges, new_rates,
-                                    product_type=product, skin_type=skin, budget=budget_in, sensitivity=sensitive)
+                                    product_type=product, skin_type=skin, price_min=price_min, price_max=price_max,
+                                    sensitivity=sensitive)
         output_message = "Top " + str(min(len(search_data), 10)) + " products for: " + query
         
         # invalid concerns query
