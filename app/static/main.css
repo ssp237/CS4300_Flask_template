@@ -170,6 +170,12 @@
     color: black;
   }
 
+  .product .stars span{
+    /* color: linear-gradient(to top,#EFA289,#fd7d7d);; */
+    color: #fd7d7d;
+    font-size: 2vh;
+  }
+
   .product .name {
     display: flex;
     flex-direction: column;
@@ -190,9 +196,9 @@
     margin-top: 2vh;
   }
 
-  .product .price h5{
+  .product .price h4{
     /* font-weight: 300; */
-    font-size: 2vh;
+    font-size: 2.5vh;
     color: #386A98;
   }
 

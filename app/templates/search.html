@@ -141,11 +141,23 @@
           <br>
           <a class="product" href="{{ d[1]['link'] }}">
             <div>
+              <div class="stars">
+                {% for i in range(3) %}
+                <span class="material-icons">
+                  star
+                </span>
+                {% endfor %}
+                {% for i in range(2) %}
+                <span class="material-icons">
+                  star_outline
+                </span>
+                {% endfor %}
+              </div>
               <div class="name">
                 <h4>{{ d[0] }}</h4>
               </div>
               <div class="price">
-                <h5>${{ d[1]["price"] }}</h5>
+                <h4>${{ d[1]["price"] }}</h4>
               </div>
               <div class="brand-score">
                 <div>
