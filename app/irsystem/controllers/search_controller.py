@@ -348,9 +348,11 @@ def search():
     budget_in = request.args.get('price-range')
     if budget_in == 'all': budget_in = None
 
-    price_min = int(request.args.get('price-min'))
+    price_min = 0
+    # int(request.args.get('price-min'))
     if price_min < 0: price_min = 0
-    price_max = int(request.args.get('price-max'))
+    price_max = 1000
+    # int(request.args.get('price-max'))
     if price_max > 1000: price_max = 1000
 
 
