@@ -4,6 +4,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import random
+from sqlalchemy import and_
 
 
 project_name = ["Pocket", "Esthetician"]
@@ -181,7 +182,7 @@ def updateTip(query_string, mat, tip_ind, key_to_ind, inc):
             mat = np.append(mat, col, axis=1)
 
 
-def concern_similarity(query, category_info, prod_to_idx, category_to_idx):
+def concern_similarity(query, category_info, prod_to_idx, category_to_idx, product_types):
     """ Finds cosine similarity between input query (concerns) and each product category's concern list. 
         Returns a numpy array with each product's score, based on the categories they are in.
         
@@ -201,7 +202,8 @@ def concern_similarity(query, category_info, prod_to_idx, category_to_idx):
     for k,v in category_info.items():
         sim = cos_sim(k, tfidf_mat, category_to_idx)
         for p in v['products']:
-            result[prod_to_idx[p]] += sim
+            if p in prod_to_idx:
+                result[prod_to_idx[p]] += sim
 
             
         # added adjustments
@@ -223,30 +225,80 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
                  product_info: (product -> Dict) Dict
         Returns: List
     """
-    scores = concern_similarity(query, category_info, prod_to_idx, category_to_idx)
+    scores = concern_similarity(query, category_info, prod_to_idx, category_to_idx, product_types)
     scores += 2 * claims_similarity(query, product_info, prod_to_idx)
     if sum(scores) == 0: return 'invalid query'
     
     # ranking adjustments
-    if skin_type != None:
+    if skin_type is not None:
         scores = adjust_skin_type(scores, skin_type)
-    if sensitivity != None:
+    if sensitivity is not None:
         scores = adjust_sensitivity(scores, sensitivity)
     
     # strict filters
     scores = adjust_rating(scores, ratings)
-    if budget != None:
+    if budget is not None:
         scores[np.invert(price_ranges[budget])] = 0     
-    if product_type != None:
+    if product_type is not None:
         scores[np.invert(product_types[product_type])] = 0
     
     len_rank = np.count_nonzero(scores)
     scores_idx = [(val,prod) for prod, val in enumerate(scores)]
-    rank_idx = sorted(scores_idx, key = lambda x: (x[0], ratings[x[1]], product_info[idx_to_prod[x[1]]]["price"],
-                                                  product_info[idx_to_prod[x[1]]]["num faves"]), reverse = True)
+    rank_idx = sorted(scores_idx, key = lambda x: (x[0], ratings[x[1]], product_info[idx_to_prod[x[1]]]["num_faves"]),
+                      reverse = True)
     
     ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], int(ratings[x[1]])), rank_idx))[:len_rank]
     return ranking
+
+
+def get_data(product_type=None, budget=(0, 1000)):
+    """
+    Get data dictionary and product-index dictionary for products
+    matching given parameters
+    :param product_type: Type of product (string)
+    :param budget: Budget to stay within (tuple of numbers)
+    :return: Tuple of dictionary of data, product index dictionary,
+            index product dictionary, ranking info, and new product types dict.
+    """
+    data = {}
+    i = 0
+    p_to_ind, ind_to_p = {}, {}
+    query_data = Product.query.with_entities(
+        Product.name, Product.num_faves,
+        Product.claims, Product.ingredients, Product.ptype).filter(
+        and_(Product.price >= budget[0], Product.price <= budget[1])
+    ).all()
+    num_products = len(query_data)
+    ptypes = {}
+    for prod in query_data:
+        data[prod.name] = {
+            "num_faves": prod.num_faves,
+            "claims": prod.claims,
+            # "ingredients": prod.ingredients
+        }
+        for t in prod.ptype:
+            if t in ptypes:
+                ptypes[t][i] = True
+            else:
+                ptypes[t] = np.full(num_products, False)
+                ptypes[t][i] = True
+        p_to_ind[prod.name] = i
+        ind_to_p[i] = prod.name
+        i += 1
+
+    ratings = np.zeros(len(data))
+    for prod in reviews_lst:
+        if prod["product"] in data:
+            ratings[p_to_ind[prod["product"]]] = prod['rate']
+    return data, p_to_ind, ind_to_p, ratings, ptypes
+
+
+def get_price_and_link(name):
+    """
+    Get the price and link of a product given a name
+    """
+    prod = Product.query.with_entities(Product.price, Product.link).filter_by(name=name).first()
+    return prod.price, prod.link
 
 
 @irsystem.route('/increase')
@@ -307,8 +359,9 @@ def search():
     else:
         tip = getTip(query, tips_arr, tips_to_ind, terms_to_ind)
         tip_data = tips[tip]
-        search_data = rank_products(query, categories, products_to_indices, indices_to_products,
-                                    data, category_to_index, product_types, price_ranges, ratings, 
+        new_data, p_to_ind, ind_to_p, new_rates, new_p_types = get_data(budget=(5, 10))
+        search_data = rank_products(query, categories, p_to_ind, ind_to_p,
+                                    new_data, category_to_index, new_p_types, price_ranges, new_rates,
                                     product_type=product, skin_type=skin, budget=budget_in, sensitivity=sensitive)
         output_message = "Top " + str(min(len(search_data), 10)) + " products for: " + query
         
@@ -321,8 +374,15 @@ def search():
         elif len(search_data) == 0:
             output_message = 'Sorry, there are no results matching your preferences.'
 
+        else:
+            search_data = search_data[:min(10, len(search_data))]
+            for tup in search_data:
+                dat = get_price_and_link(tup[0])
+                tup[1]["price"] = dat[0]
+                tup[1]["link"] = dat[1]
+
     return render_template('search.html', name=project_name, netid=net_id,
-                           output_message=output_message, data=search_data[:10],
+                           output_message=output_message, data=search_data,
                            tip=tip, tip_data=tip_data, 
                            query=query, product_types=product_types, product_type=product, 
                            price_ranges=price_ranges, price_range=budget_in, 

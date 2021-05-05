@@ -8,3 +8,10 @@ default:
 run:
 	source venv/bin/activate && source .env && python app.py
 
+db:
+	 rm -rf migrations
+	python manage.py db init
+	python manage.py db migrate
+	python manage.py db upgrade
+
+

@@ -1,5 +1,5 @@
 {
-   "Anti-acne": [
+   "anti-acne": [
       "Lauric Acid",
       "Niacinamide",
       "Phytosphingosine",
@@ -43,7 +43,7 @@
       "Potassium Azeloyl Diglycinate (Skin-Brightening)",
       "Niacinamide (Skin-Restoring Ingredient)"
    ],
-   "Antioxidant": [
+   "antioxidant": [
       "Caffeine",
       "Tocopheryl Acetate",
       "Rosmarinus Officinalis Leaf Oil/Rosemary Leaf Oil",
@@ -575,7 +575,7 @@
       "Rose Otto Oil",
       "Ascorbyl Palmitate"
    ],
-   "Cell-communicating ingredient": [
+   "cell-communicating ingredient": [
       "Adenosine",
       "Niacinamide",
       "Palmitoyl Oligopeptide",
@@ -671,7 +671,7 @@
       "Adenosine", 
       "Niacinamide (Skin-Restoring Ingredient)"
    ],
-   "Exfoliant": [
+   "exfoliant": [
       "Capryloyl Salicylic Acid",
       "Glycolic Acid",
       "Mandelic Acid",
@@ -706,7 +706,7 @@
       "Lactic Acid", 
       "Glucono Delta Lactone (Fermented Sugar)"
    ],
-   "Skin brightening": [
+   "skin brightening": [
       "3-O-Ethyl Ascorbic Acid",
       "Niacinamide",
       "Hexapeptide-2",
@@ -809,7 +809,7 @@
       "Ascorbic Acid", 
       "Niacinamide (Skin-Restoring Ingredient)"
    ],
-   "Skin-identical ingredient": [
+   "skin-identical ingredient": [
       "Glycerin",
       "Sodium PCA",
       "Urea",
@@ -932,7 +932,7 @@
       "Hydroxypropyl Bispalmitamide Mea",
       "Palmitic Acid"
    ],
-   "Soothing": [
+   "soothing": [
       "Sucrose",
       "Anthemis Nobilis (Chamomile)",
       "Calophyllum Tacamahaca (Tamanu) Seed Oil",
@@ -1406,7 +1406,7 @@
       "Colloidal Oatmeal (2%)", 
       "Organic Aloe Barbadensis (Aloe Vera) Leaf Juice"
    ],
-   "Sunscreen": [
+   "sunscreen": [
       "Titanium Dioxide",
       "Ethylhexyl Salicylate",
       "Octocrylene (5.0%)",
@@ -1547,7 +1547,7 @@
       "Zinc Oxide (2.1%)", 
       "Octocrylene (2.5%)"
   ],
-   "Abrasive/scrub": [
+   "abrasive/scrub": [
       "Tin Oxide",
       "Zea Mays (Corn) Starch",
       "Oryza Sativa (Rice) Extract",
@@ -1646,7 +1646,7 @@
       "Hydrogenated Jojoba Oil (Non-Fragrant Oil/Emollient)", 
       "Colloidal Oatmeal (2%)"
    ],
-   "Antimicrobial/antibacterial": [
+   "antimicrobial/antibacterial": [
       "Rosmarinus Officinalis (Rosemary)",
       "Alcohol Denat",
       "Rosmarinus Officinalis Leaf Oil/Rosemary Leaf Oil",
@@ -1854,7 +1854,7 @@
       "Peat", 
       "Rose Otto Oil"
    ],
-   "Buffering": [
+   "buffering": [
       "Sodium Hydroxide",
       "Potassium Hydroxide",
       "Glycolic Acid",
@@ -1950,7 +1950,7 @@
       "Ascorbic Acid", 
       "Sodium Hydroxide"
    ],
-   "Chelating": [
+   "chelating": [
       "Disodium EDTA",
       "Trisodium EDTA",
       "Sodium Citrate",
@@ -2010,7 +2010,7 @@
       "Sodium Citrate", 
       "Glucono Delta Lactone (Fermented Sugar)"
    ],
-   "Colorant": [
+   "colorant": [
       "Magnesium Stearate",
       "Bismuth Oxychloride (Ci 77163)",
       "Mica",
@@ -2277,7 +2277,7 @@
       "Carbon Black", 
       "Carmine"
    ],
-   "Emollient": [
+   "emollient": [
       "Bis-PEG-18 Methyl Ether Dimethyl Silane",
       "Glycereth-26",
       "PPG-5-Ceteth-20",
@@ -3346,7 +3346,7 @@
       "Marula Oil"
 
    ],
-   "Emulsifying": [
+   "emulsifying": [
       "PPG-5-Ceteth-20",
       "Polysorbate 20",
       "Hexylene Glycol",
@@ -3886,7 +3886,7 @@
       "Polyglyceryl-6 Palmitate/Succinate", 
       "Polyglyceryl-4 Caprylate"
    ],
-   "Moisturizer/humectant": [
+   "moisturizer/humectant": [
       "Methyl Gluceth-20",
       "Bis-PEG-18 Methyl Ether Dimethyl Silane",
       "Glycerin",
@@ -4382,7 +4382,7 @@
       "Alpha-Glucan", 
       "Hydrolyzed Collagen (Marine)"
    ],
-   "Perfuming": [
+   "perfuming": [
       "Anthemis Nobilis Flower Extract",
       "Olea Europaea (Olive) Leaf Extract",
       "Benzyl Alcohol",
@@ -4850,7 +4850,7 @@
       "Rose Otto Oil", 
       "Sweet Orange Oil"
    ],
-   "Preservative": [
+   "preservative": [
       "Potassium Sorbate",
       "Phenoxyethanol",
       "Leuconostoc/Radish Root Ferment Filtrate",
@@ -5011,7 +5011,7 @@
       "Potassium Sorbate", 
       "Dehydroacetic Acid"
    ],
-   "Solvent": [
+   "solvent": [
       "Water",
       "PEG-8",
       "Hexylene Glycol",
@@ -5234,7 +5234,7 @@
       "Mineral Oil/Huile Minerale", 
       "Water/Aqua/Eau"
    ],
-   "Surfactant/cleansing": [
+   "surfactant/cleansing": [
       "Bis-PEG-18 Methyl Ether Dimethyl Silane",
       "PPG-5-Ceteth-20",
       "Polysorbate 20",
@@ -5788,7 +5788,7 @@
       "PEG-40 Stearate", 
       "Polyglyceryl-6 Palmitate/Succinate"
    ],
-   "Viscosity controlling": [
+   "viscosity controlling": [
       "Glycereth-26",
       "Disodium EDTA",
       "Butylene Glycol",
@@ -6427,13 +6427,13 @@
       "Acrylamide/Sodium Acryloyldimethyltaurate Copolymer", 
       "Microcrystalline Wax (Texture-Enhancing)"
    ],
-   "Absorbent/mattifier": [
+   "absorbent/mattifier": [
    ],
-   "Astringent": [
+   "astringent": [
    ],
-   "Deodorant": [
+   "deodorant": [
    ],
-   "Emulsion Stabilising": [
+   "emulsion stabilising": [
    ]
     
 }

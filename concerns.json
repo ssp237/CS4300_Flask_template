@@ -1,7 +1,7 @@
 {
-    "Abrasive/scrub": [
+    "abrasive/scrub": [
     ],
-    "Absorbent/mattifier": [
+    "absorbent/mattifier": [
         "acne", 
         "oil", 
         "oily",
@@ -13,7 +13,7 @@
         "shiny",
         "shininess"
     ],
-    "Anti-acne": [
+    "anti-acne": [
         "acne",
         "pimple",
         "pimples",
@@ -23,7 +23,7 @@
         "bumpy",
         "comedones"
     ],
-    "Antimicrobial/antibacterial": [
+    "antimicrobial/antibacterial": [
         "bacteria",
         "fungi",
         "antimicrobials",
@@ -32,7 +32,7 @@
         "infected",
         "infection"
     ],
-    "Antioxidant": [
+    "antioxidant": [
         "aging",
         "wrinkle",
         "wrinkly",
@@ -55,11 +55,11 @@
         "bright",
         "dull"
     ],
-    "Astringent": [
+    "astringent": [
     ],
-    "Buffering": [
+    "buffering": [
     ],
-    "Cell-communicating ingredient": [
+    "cell-communicating ingredient": [
         "aging",
         "wrinkle",
         "wrinkly",
@@ -83,19 +83,19 @@
         "scarred",
         "marks"
     ],
-    "Chelating": [
+    "chelating": [
     ],
-    "Colorant": [
+    "colorant": [
     ],
-    "Deodorant": [
+    "deodorant": [
     ],
-    "Emollient": [
+    "emollient": [
     ],
-    "Emulsifying": [
+    "emulsifying": [
     ],
-    "Emulsion Stabilising": [
+    "emulsion stabilising": [
     ],
-    "Exfoliant": [
+    "exfoliant": [
         "bumpy",
         "bumps",
         "texture",
@@ -114,7 +114,7 @@
         "pore",
         "dead"
     ],
-    "Moisturizer/humectant": [
+    "moisturizer/humectant": [
         "dehydrated",
         "dry",
         "dryness",
@@ -130,11 +130,11 @@
         "winter",
         "cold"
     ],
-    "Perfuming": [
+    "perfuming": [
     ],
-    "Preservative": [
+    "preservative": [
     ],
-    "Skin brightening": [
+    "skin brightening": [
         "dull",
         "dullness",
         "spots",
@@ -152,11 +152,11 @@
         "fresh",
         "fresher"
     ],
-    "Skin-identical ingredient": [
+    "skin-identical ingredient": [
     ],
-    "Solvent": [
+    "solvent": [
     ],
-    "Soothing": [
+    "soothing": [
         "inflamed",
         "inflammation",
         "itchy",
@@ -168,7 +168,7 @@
         "sensitive",
         "sensitivity"
     ],
-    "Sunscreen": [
+    "sunscreen": [
         "sun",
         "sunny",
         "summer",
@@ -177,7 +177,7 @@
         "outdoors",
         "protection"
     ],
-    "Surfactant/cleansing": [
+    "surfactant/cleansing": [
         "dirty",
         "dirt",
         "makeup",
@@ -194,7 +194,7 @@
         "grease",
         "greasy"
     ],
-  "Viscosity controlling": [
+  "viscosity controlling": [
     ]
 
 }

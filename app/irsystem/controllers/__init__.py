@@ -19,6 +19,8 @@ from app import socketio
 
 # Import module models 
 # from app.irsystem import search
+from config import Config
+from ..models.products import Product
 
 # IMPORT THE BLUEPRINT APP OBJECT 
 from app.irsystem import irsystem
@@ -113,7 +115,7 @@ with open(ingredients_file, "r") as f:
 
 with open(concerns_file, "r") as f:
     u_concerns = json.loads("\n".join(f.readlines()))
-    
+
 with open("relevant_types.json", "r") as f:
     relevant_product_types = json.loads("\n".join(f.readlines()))
 
@@ -121,7 +123,7 @@ with open(tip_file, "r") as f:
     tips = json.loads("\n".join(f.readlines()))
 
 with open("reviews.json", "r") as f:
-    reviews_lst = json.loads("\n".join(f.readlines()))    
+    reviews_lst = json.loads("\n".join(f.readlines()))
 
 with open("product_type_names.json", "r") as f:
     product_file_to_type = json.loads("\n".join(f.readlines()))
@@ -129,7 +131,8 @@ with open("product_type_names.json", "r") as f:
 for _, v in data.items():
     i_string = v['ingredients']
     if i_string[-1] == '.': i_string = i_string[:len(i_string) - 1]
-    i_list = re.split(", |\. ", i_string)
+    i_list = list(filter(lambda x: (x is not None) and (x.strip() != ","),
+                         re.split(r"(, |\.)|(\(and\)) ", i_string)))
     v['ingredients'] = [(re.sub(r".*:", "", s)).strip() for s in i_list]
 
 categories = {}
@@ -149,6 +152,7 @@ indices_to_products = {v: k for k, v in products_to_indices.items()}
 
 tips_arr, tips_to_ind, terms_to_ind = dicToNumpy(tips)
 
+
 def create_product_types_dict():
     """Returns a dictionary to map product types to Boolean arrays 
     (True if index corresponds to a product of that type).
@@ -158,9 +162,9 @@ def create_product_types_dict():
     """
     product_types = {}
     product_files = glob.glob("./product_types_lists/*.json")
-    if len(product_files) == 0: 
-        print('can\'t read')  
-    
+    if len(product_files) == 0:
+        print('can\'t read')
+
     for p_file in product_files:
         with open(p_file) as json_file:
             data = json.load(json_file)
@@ -170,8 +174,9 @@ def create_product_types_dict():
                 continue
             p_arr[products_to_indices[p]] = True
         product_types[product_file_to_type[p_file[22:-5]]] = p_arr
-    
+
     return product_types
+
 
 def create_price_ranges():
     """Returns a dictionary to map price ranges to Boolean arrays 
@@ -181,9 +186,9 @@ def create_price_ranges():
     Returns: (String -> Numpy Array) Dict 
     """
     price_ranges = dict([('under $15', np.full(num_products, False)), ('$15-30', np.full(num_products, False)),
-                         ('$30-50', np.full(num_products, False)), ('$50-75', np.full(num_products, False)), 
+                         ('$30-50', np.full(num_products, False)), ('$50-75', np.full(num_products, False)),
                          ('$75+', np.full(num_products, False))])
-    for k,v in data.items():
+    for k, v in data.items():
         if v['price'] < 15:
             price_ranges['under $15'][products_to_indices[k]] = True
         elif v['price'] < 30:
@@ -192,10 +197,11 @@ def create_price_ranges():
             price_ranges['$30-50'][products_to_indices[k]] = True
         elif v['price'] < 75:
             price_ranges['$50-75'][products_to_indices[k]] = True
-        else :
+        else:
             price_ranges['$75+'][products_to_indices[k]] = True
-    
+
     return price_ranges
+
 
 def create_ratings():
     """Returns a Numpy Array where each product index stores its rating.
@@ -204,14 +210,32 @@ def create_ratings():
     Returns: Numpy Array
     """
     ratings = np.zeros(num_products)
-    
+
     for prod in reviews_lst:
         ratings[products_to_indices[prod['product']]] = prod['rate']
-    
+
     return ratings
+
 
 product_types = create_product_types_dict()
 price_ranges = create_price_ranges()
 ratings = create_ratings()
 
+# Add to db
+if Config.LOAD_DB:
+    for name, d in data.items():
+        i = products_to_indices[name]
+        types = [k for k, v in product_types.items() if v[i]]
+        info = Product(name=name, link=d["link"], brand=d["brand"],
+                       claims=d["claims"], num_faves=d["num faves"],
+                       ingredients=d["ingredients"], price=d["price"],
+                       types=types)
+        db.session.merge(info)
 
+    db.session.commit()
+    #
+    # p = Product.query.with_entities(Product.brand, Product.name).filter_by(brand="La Prairie").all()
+    # print(p)
+
+
+# del data
