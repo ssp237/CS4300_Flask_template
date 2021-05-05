@@ -148,10 +148,10 @@ for k, v in u_concerns.items():
     categories[k.lower()] = d
 
 # Construct auxiliary data structures
-num_products = len(data)
+# num_products = len(data)
 category_to_index = {name: index for index, name in enumerate(categories)}
-products_to_indices = {k: v for k, v in zip(data.keys(), range(num_products))}
-indices_to_products = {v: k for k, v in products_to_indices.items()}
+# products_to_indices = {k: v for k, v in zip(data.keys(), range(num_products))}
+# indices_to_products = {v: k for k, v in products_to_indices.items()}
 
 tips_arr, tips_to_ind, terms_to_ind = dicToNumpy(tips)
 
@@ -181,30 +181,30 @@ def create_product_types_dict():
     return product_types
 
 
-def create_prices():
-    prices = np.array(np.ndarray.flatten(np.indices((1,num_products))[1]), dtype=float)
-    for x in prices:
-        prices[int(x)] = data[indices_to_products[int(x)]]['price']
-    return prices
+# def create_prices():
+#     prices = np.array(np.ndarray.flatten(np.indices((1,num_products))[1]), dtype=float)
+#     for x in prices:
+#         prices[int(x)] = data[indices_to_products[int(x)]]['price']
+#     return prices
 
 
-def create_ratings():
-    """Returns a Numpy Array where each product index stores its rating.
+# def create_ratings():
+#     """Returns a Numpy Array where each product index stores its rating.
     
-    Params: {}
-    Returns: Numpy Array
-    """
-    ratings = np.zeros(num_products)
+#     Params: {}
+#     Returns: Numpy Array
+#     """
+#     ratings = np.zeros(num_products)
 
-    for prod in reviews_lst:
-        ratings[products_to_indices[prod['product']]] = prod['rate']
+#     for prod in reviews_lst:
+#         ratings[products_to_indices[prod['product']]] = prod['rate']
 
-    return ratings
+#     return ratings
 
 
 product_types = create_product_types_dict()
-prices = create_prices()
-ratings = create_ratings()
+# prices = create_prices()
+# ratings = create_ratings()
 
 # Add to db
 if Config.LOAD_DB:

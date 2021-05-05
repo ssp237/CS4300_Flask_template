@@ -214,16 +214,22 @@ def concern_similarity(query, category_info, prod_to_idx, category_to_idx, produ
     return result
 
 
-def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, category_to_idx,
-                 product_types, ratings, product_type=None, skin_type=None, price_min=None, price_max=None,
-                  sensitivity=None):
+# def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, category_to_idx,
+#                  product_types, ratings, product_type=None, skin_type=None, price_min=None, price_max=None,
+#                   sensitivity=None):
+def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, category_to_idx, product_types, 
+                  ratings, product_type=None, skin_type=None, sensitivity=None):
     """ Returns a ranked list of products, with the most relevant at index 0.
         
         Params: {query: (user input) String,
                  category_info: (category -> Dict) Dict,
                  prod_to_idx: (product -> index) Dict,
-                 idx_to_prod: (index -> product) Dict
+                 idx_to_prod: (index -> product) Dict,
                  product_info: (product -> Dict) Dict
+                 product_types: (product type -> Numpy Array) Dict,
+                 ratings: Numpy Array,
+                 skin_type: String,
+                 sensitivity: Boolean,
         Returns: List
     """
     scores = concern_similarity(query, category_info, prod_to_idx, category_to_idx, product_types)
@@ -238,18 +244,18 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
         scores = adjust_sensitivity(scores, sensitivity)
     
     # strict filters
-    if price_min is not None:
-        m1 = prices < price_min
-        scores[m1] = 0
-    if price_max is not None:
-        m2 = prices > price_max
-        scores[m2] = 0
+#     if price_min is not None:
+#         m1 = prices < price_min
+#         scores[m1] = 0
+#     if price_max is not None:
+#         m2 = prices > price_max
+#         scores[m2] = 0
     if product_type is not None:
         scores[np.invert(product_types[product_type])] = 0
     
     len_rank = np.count_nonzero(scores)
     scores_idx = [(val,prod) for prod, val in enumerate(scores)]
-    rank_idx = sorted(scores_idx, key = lambda x: (x[0], ratings[x[1]], product_info[idx_to_prod[x[1]]]["num_faves"]),
+    rank_idx = sorted(scores_idx, key = lambda x: (x[0], ratings[x[1]], product_info[idx_to_prod[x[1]]]["num faves"]),
                       reverse = True)
     
     ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], int(ratings[x[1]])), rank_idx))[:len_rank]
@@ -269,7 +275,7 @@ def get_data(product_type=None, budget=(0, 1000)):
     i = 0
     p_to_ind, ind_to_p = {}, {}
     query_data = Product.query.with_entities(
-        Product.name, Product.num_faves,
+        Product.name, Product.num faves,
         Product.claims, Product.ingredients, Product.ptype).filter(
         and_(Product.price >= budget[0], Product.price <= budget[1])
     ).all()
@@ -277,7 +283,7 @@ def get_data(product_type=None, budget=(0, 1000)):
     ptypes = {}
     for prod in query_data:
         data[prod.name] = {
-            "num_faves": prod.num_faves,
+            "num faves": prod.num_faves,
             "claims": prod.claims,
             # "ingredients": prod.ingredients
         }
@@ -371,7 +377,7 @@ def search():
     else:
         tip = getTip(query, tips_arr, tips_to_ind, terms_to_ind)
         tip_data = tips[tip]
-        new_data, p_to_ind, ind_to_p, new_rates, new_p_types = get_data(budget=(5, 10))
+        new_data, p_to_ind, ind_to_p, new_rates, new_p_types = get_data(product_type = product, budget=(price_min, price_max))
         search_data = rank_products(query, categories, p_to_ind, ind_to_p,
                                     new_data, category_to_index, new_p_types, new_rates,
                                     product_type=product, skin_type=skin, price_min=price_min, price_max=price_max,
