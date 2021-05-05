@@ -104,6 +104,7 @@ data_file = "finaldata.json"
 ingredients_file = "ingredients.json"
 concerns_file = "concerns.json"
 tip_file = "skincare_tips.json"
+reviews_file = "reviews.json"
 
 with open(data_file, "r") as f:
     data = json.loads("\n".join(f.readlines()))
@@ -119,6 +120,9 @@ with open("relevant_types.json", "r") as f:
 
 with open(tip_file, "r") as f:
     tips = json.loads("\n".join(f.readlines()))
+
+with open(reviews_file, "r") as f:
+    reviews_lst = json.loads("\n".join(f.readlines()))    
 
 
 for _, v in data.items():
@@ -193,7 +197,21 @@ def create_price_ranges():
     
     return price_ranges
 
+def create_ratings():
+    """Returns a Numpy Array where each product index stores its rating.
+    
+    Params: {}
+    Returns: Numpy Array
+    """
+    ratings = np.zeros(num_products)
+    
+    for prod in reviews_lst:
+        ratings[products_to_indices[prod['product']]] = prod['rate']
+    
+    return ratings
+
 product_types = create_product_types_dict()
 price_ranges = create_price_ranges()
+ratings = create_ratings()
 
 
