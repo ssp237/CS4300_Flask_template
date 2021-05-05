@@ -113,7 +113,11 @@
     text-align: left;
   }
 
-  .query .price-filter .slider {
+  .query .price-filter input {
+    width: 5vw;
+  }
+
+  .query .price-filter .content {
     margin-top: 1vh;
   }
 

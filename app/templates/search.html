@@ -69,7 +69,7 @@
       <div class="query">
         <form class="form-inline global-search">
           <div class="form-group">
-            <input id="input" type="search" name="search" class="form-control"
+            <input id="query" type="search" name="search" class="form-control"
               placeholder="What are your skin care concerns?" aria-label="Type your skin care concerns" {% if query %}
               value="{{ query }}" {% endif %}>
           </div>
@@ -124,12 +124,16 @@
             <!-- <label for="price-range">Price Range:</label> -->
             <p style="font-size: 14px; font-weight:bold;">Price Range</p>
 
-            <div class="slider">
+            <div class="content">
               From
-              <input id="input" name="price-min" placeholder="0" {% if price_min %} value="{{ price_min }}" {% endif %}>
+              $ <input id="price-min" type="number" name="price-min" placeholder="0" value="{{ price_min }}">
               to
-              <input id="input" name="price-max" placeholder="1000" {% if price_max %} value="{{ price_max }}" {% endif
-                %}>
+              $ <input id="price-max" type="number" name="price-max" placeholder="1000" value="{{ price_max }}">
+
+              <!-- <div class="slider">
+                <input type="range" min="0" max="1000" value="{{ price_min }}" id="lower">
+                <input type="range" min="0" max="1000" value="{{ price_max }}" id="upper">
+              </div> -->
             </div>
           </div>
 

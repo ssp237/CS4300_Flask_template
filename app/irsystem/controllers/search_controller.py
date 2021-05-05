@@ -296,10 +296,10 @@ def search():
     budget_in = request.args.get('price-range')
     if budget_in == 'all': budget_in = None
 
-    price_min = request.args.get('price_min')
-    if price_min == None: price_min = 0
-    price_max = request.args.get('price_max')
-    if price_max == None: price_max = 1000
+    price_min = int(request.args.get('price-min'))
+    if price_min < 0: price_min = 0
+    price_max = int(request.args.get('price-max'))
+    if price_max > 1000: price_max = 1000
 
 
     sensitive = request.args.get('sensitivity')
