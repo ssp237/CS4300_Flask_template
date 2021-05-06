@@ -282,6 +282,10 @@ def get_data(product_type=None, budget=(0, 1000)):
     ).all()
     num_products = len(query_data)
     ptypes = {}
+    
+    for k,v in product_file_to_type.items():
+        ptypes[v] = np.full(num_products, False)
+        
     for prod in query_data:
         data[prod.name] = {
             "num faves": prod.num_faves,
@@ -289,11 +293,11 @@ def get_data(product_type=None, budget=(0, 1000)):
             # "ingredients": prod.ingredients
         }
         for t in prod.ptype:
-            if t in ptypes:
-                ptypes[t][i] = True
-            else:
-                ptypes[t] = np.full(num_products, False)
-                ptypes[t][i] = True
+#             if t in ptypes:
+            ptypes[t][i] = True
+#             else:
+#                 ptypes[t] = np.full(num_products, False)
+#                 ptypes[t][i] = True
         p_to_ind[prod.name] = i
         ind_to_p[i] = prod.name
         i += 1
