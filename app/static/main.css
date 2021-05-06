@@ -268,6 +268,48 @@
     font-size: 1.5vh;
   }
 
+  .no-results {
+    width: inherit;
+    margin: auto;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 5% 0% 7%;
+    border-radius: 1vh;
+    background-color: rgb(237, 237, 237);
+    box-shadow: 0 2px 8px rgb(0,0, 0,.25);
+    text-align: center;
+  }
+
+  .no-results span{
+    font-size: 12vh;
+  }
+
+  .no-results h4, h3{
+    width: fit-content;
+    /* margin: auto; */
+  }
+
+  .no-results h3{
+    font-weight: bold;
+  }
+
+  .no-results h4 {
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .no-results h5 {
+    width: 70%;
+    /* margin: auto; */
+  }
+
+  .output-message {
+    color: #71777b; 
+  }
+
   
 
   .col {

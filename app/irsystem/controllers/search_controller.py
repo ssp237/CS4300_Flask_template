@@ -390,7 +390,7 @@ def search():
         # invalid concerns query
         if search_data == 'invalid query':
             search_data = []
-            output_message = 'Sorry, that query is invalid. Please try a different search!'
+            output_message = 'Sorry, that query is invalid. Please check spelling or try different keywords! \n For example: "acne"'
         
         # no results (due to advanced search filtering)
         elif len(search_data) == 0:

@@ -33,8 +33,8 @@
 </head>
 
 <body>
-  <div class="{{ 'results-page' if data else 'header' }}">
-    <div class="{{ 'info' if data else '' }}">
+  <div class="{{ 'results-page' if query else 'header' }}">
+    <div class="{{ 'info' if query else '' }}">
       <div class="title">
         <h1>
           <span style="font-weight: 900;">{{ name[0] }}</span>
@@ -65,7 +65,7 @@
       {% endif %}
     </div>
 
-    <div class="{{ 'results' if data else '' }}">
+    <div class="{{ 'results' if query else '' }}">
       <div class="query">
         <form class="form-inline global-search">
           <div class="form-group">
@@ -142,9 +142,10 @@
         </form>
       </div>
 
+      {% if query %}
       {% if data %}
       <form class="form-inline global-search">
-        <p style="color: #71777b; margin-left: 4%;">{{output_message}}</p>
+        <p class="output-message" style="margin-left: 4%;">{{output_message}}</p>
         <div class="products">
           {% for d in data %}
           <a href="{{ d[1]['link'] }}">
@@ -190,8 +191,25 @@
           {% endfor %}
         </div>
       </form>
+      {% endif %}
+
+      {% if not data %}
+      <div class="no-results">
+        <div>
+          <span class="material-icons" style="color:#b9b9b9;">
+            sentiment_very_dissatisfied
+          </span>
+          <span class="material-icons md-48" style="font-size: 8vh; color: #716f6f; margin-left: -5vw;">
+            search
+          </span>
+        </div>
+        <h4>"{{ query }}"</h4>
+        <h3>No Results Found</h3>
+        <h5 class="output-message">{{output_message}}</h5>
+      </div>
+      {% endif %}
+      {% endif %}
     </div>
-    {% endif %}
   </div>
 
 
