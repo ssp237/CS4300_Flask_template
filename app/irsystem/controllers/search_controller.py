@@ -258,7 +258,8 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
     rank_idx = sorted(scores_idx, key = lambda x: (x[0], ratings[x[1]], product_info[idx_to_prod[x[1]]]["num faves"]),
                       reverse = True)
     
-    ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], int(ratings[x[1]])), rank_idx))[:len_rank]
+    ranking = list(map(lambda x: (idx_to_prod[x[1]], product_info[idx_to_prod[x[1]]], 
+    int(ratings[x[1]]), imagelinks[idx_to_prod[x[1]]]["image link"]), rank_idx))[:len_rank]
     return ranking
 
 
@@ -308,8 +309,8 @@ def get_price_and_link(name):
     """
     Get the price and link of a product given a name
     """
-    prod = Product.query.with_entities(Product.price, Product.link).filter_by(name=name).first()
-    return prod.price, prod.link
+    prod = Product.query.with_entities(Product.price, Product.link, Product.brand).filter_by(name=name).first()
+    return prod.price, prod.link, prod.brand
 
 
 @irsystem.route('/increase')
@@ -399,6 +400,7 @@ def search():
                 dat = get_price_and_link(tup[0])
                 tup[1]["price"] = dat[0]
                 tup[1]["link"] = dat[1]
+                tup[1]["brand"] = dat[2]
 
     return render_template('search.html', name=project_name, netid=net_id,
                            output_message=output_message, data=search_data,
