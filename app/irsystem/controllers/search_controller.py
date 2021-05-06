@@ -20,13 +20,17 @@ def adjust_sensitivity(ranking, sensitive, products_to_indices):
              sensitive: Boolean}
     Returns: Numpy Array 
     """
+    products = set(products_to_indices.keys())
     if sensitive:
-        for prod in categories['abrasive/scrub']['products']:
+        scrubs = products.union(set(categories['abrasive/scrub']['products']))
+        perfuming = products.union(set(categories['perfuming']['products']))
+        for prod in scrubs:
             ranking[products_to_indices[prod]] *= 0.25
-        for prod in categories['perfuming']['products']:
+        for prod in perfuming:
             ranking[products_to_indices[prod]] *= 0.25
-            
-        for prod in categories['soothing']['products']:
+        
+        soothing = products.union(set(categories['soothing']['products']))
+        for prod in soothing:
             ranking[products_to_indices[prod]] *= 1.75
     return ranking
 
@@ -38,20 +42,25 @@ def adjust_skin_type(ranking, s_type, product_types, products_to_indices, catego
              s_type: String}
     Returns: Numpy Array 
     """
+    products = set(products_to_indices.keys())
     if s_type == 'oily':
+        
         ranking[product_types['Face Oils']] *= 0.1
-            
-        for prod in categories['absorbent/mattifier']['products']:
+        
+        absorbent = products.union(set(categories['absorbent/mattifier']['products']))
+        for prod in absorbent:
             ranking[products_to_indices[prod]] *= 1.5
         ranking[product_types['BHA Products']] *= 1.5
         ranking[product_types['Oil Absorbing Products']] *= 1.75
     
     elif s_type == 'dry':
-        for prod in categories['absorbent/mattifier']['products']:
+        absorbent = products.union(set(categories['absorbent/mattifier']['products']))
+        for prod in absorbent:
             ranking[products_to_indices[prod]] *= 0.1
         ranking[product_types['Oil Absorbing Products']] *= 0.1
-            
-        for prod in categories['soothing']['products']:
+        
+        soothing = products.union(set(categories['soothing']['products']))
+        for prod in soothing:
             ranking[products_to_indices[prod]] *= 1.5
     
     elif s_type == 'combo':
