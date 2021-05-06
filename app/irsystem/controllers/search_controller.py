@@ -275,11 +275,12 @@ def get_data(product_type=None, budget=(0, 1000)):
     data = {}
     i = 0
     p_to_ind, ind_to_p = {}, {}
+    filters = and_(Product.price >= budget[0], Product.price <= budget[1])
+    if product_type:
+        filters = and_(filters, Product.ptype.any(product_type))
     query_data = Product.query.with_entities(
         Product.name, Product.num_faves,
-        Product.claims, Product.ingredients, Product.ptype).filter(
-        and_(Product.price >= budget[0], Product.price <= budget[1])
-    ).all()
+        Product.claims, Product.ingredients, Product.ptype).filter(filters).all()
     num_products = len(query_data)
     ptypes = {}
     
@@ -324,13 +325,13 @@ def inc_query():
     """
     global changed_mat
     if not query or changed_mat:
-        return "nothing"
+        return "data"
     updateTip(query, tips_arr, tips_to_ind[tip], terms_to_ind, True)
     numpyToDic(tips_arr, tips_to_ind, terms_to_ind, tips)
     with open(tip_file, "w") as file:
         json.dump(tips, file, indent=7)
     changed_mat = True
-    return "nothing"
+    return "data"
 
 
 @irsystem.route('/decrease')
@@ -380,10 +381,11 @@ def search():
     else:
         tip = getTip(query, tips_arr, tips_to_ind, terms_to_ind)
         tip_data = tips[tip]
-        new_data, p_to_ind, ind_to_p, new_rates, new_p_types = get_data(product_type = product, budget=(price_min, price_max))
+        new_data, p_to_ind, ind_to_p, new_rates, new_p_types = \
+            get_data(product_type=product, budget=(price_min, price_max))
         search_data = rank_products(query, categories, p_to_ind, ind_to_p,
                                     new_data, category_to_index, new_p_types, new_rates,
-                                    product_type=product, skin_type=skin,
+                                    product_type=None, skin_type=skin,
                                     sensitivity=sensitive)
         output_message = "Top " + str(min(len(search_data), 10)) + " products for: " + query
         
