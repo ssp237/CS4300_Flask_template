@@ -13,7 +13,7 @@ tip = ''
 query = {}
 changed_mat = False
 
-def adjust_sensitivity(ranking, sensitive):
+def adjust_sensitivity(ranking, sensitive, products_to_indices):
     """Returns the ranking after adjusting scores based on skin sensiivity.
     
     Params: {ranking: Numpy Array,
@@ -22,16 +22,16 @@ def adjust_sensitivity(ranking, sensitive):
     """
     if sensitive:
         for prod in categories['abrasive/scrub']['products']:
-            ranking[products_to_indices[prod]] *= 0.5
+            ranking[products_to_indices[prod]] *= 0.25
         for prod in categories['perfuming']['products']:
-            ranking[products_to_indices[prod]] *= 0.5
+            ranking[products_to_indices[prod]] *= 0.25
             
         for prod in categories['soothing']['products']:
-            ranking[products_to_indices[prod]] *= 1.5
+            ranking[products_to_indices[prod]] *= 1.75
     return ranking
 
 
-def adjust_skin_type(ranking, s_type):
+def adjust_skin_type(ranking, s_type, product_types, products_to_indices, categories):
     """Returns the ranking after adjusting scores based on skin type.
     
     Params: {ranking: Numpy Array,
@@ -39,17 +39,17 @@ def adjust_skin_type(ranking, s_type):
     Returns: Numpy Array 
     """
     if s_type == 'oily':
-        ranking[product_types['Face Oils']] *= 0.5
+        ranking[product_types['Face Oils']] *= 0.1
             
         for prod in categories['absorbent/mattifier']['products']:
             ranking[products_to_indices[prod]] *= 1.5
         ranking[product_types['BHA Products']] *= 1.5
-        ranking[product_types['Oil Absorbing Products']] *= 1.5
+        ranking[product_types['Oil Absorbing Products']] *= 1.75
     
     elif s_type == 'dry':
         for prod in categories['absorbent/mattifier']['products']:
-            ranking[products_to_indices[prod]] *= 0.5
-        ranking[product_types['Oil Absorbing Products']] *= 0.5
+            ranking[products_to_indices[prod]] *= 0.1
+        ranking[product_types['Oil Absorbing Products']] *= 0.1
             
         for prod in categories['soothing']['products']:
             ranking[products_to_indices[prod]] *= 1.5
@@ -68,13 +68,13 @@ def adjust_rating(ranking, ratings):
     Returns: Numpy Array 
     """
     r1 = ratings == 1
-    ranking[r1] *= 0.1
+    ranking[r1] *= 0.5
     
     r2 = ratings == 2
-    ranking[r2] *= 0.25
+    ranking[r2] *= 0.75
     
-    r3 = ratings == 3
-    ranking[r3] *= 0.5
+#     r3 = ratings == 3
+#     ranking[r3] *= 1
     
     r4 = ratings == 4
     ranking[r4] *= 1.25
@@ -232,16 +232,16 @@ def rank_products(query, category_info, prod_to_idx, idx_to_prod, product_info, 
                  sensitivity: Boolean,
         Returns: List
     """
-    scores = concern_similarity(query, category_info, prod_to_idx, category_to_idx, product_types)
-    scores += 2 * claims_similarity(query, product_info, prod_to_idx)
+    scores = 2 * claims_similarity(query, product_info, prod_to_idx)
+    scores += concern_similarity(query, category_info, prod_to_idx, category_to_idx, product_types)
     if sum(scores) == 0: return 'invalid query'
     
     # ranking adjustments
     scores = adjust_rating(scores, ratings)
     if skin_type is not None:
-        scores = adjust_skin_type(scores, skin_type)
+        scores = adjust_skin_type(scores, skin_type, product_types, prod_to_idx, category_info)
     if sensitivity is not None:
-        scores = adjust_sensitivity(scores, sensitivity)
+        scores = adjust_sensitivity(scores, sensitivity, prod_to_idx)
     
     # strict filters
 #     if price_min is not None:
