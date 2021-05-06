@@ -3,17 +3,16 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type=text/javascript>
     $(function() {
-        $('input#helpful').on('click', function(e) {
+        $('#helpful').on('click', function(e) {
             e.preventDefault()
             $.getJSON('/increase',
                 function(data) {
-                    //do nothing
                 });
             return false;
         });
     });
     $(function() {
-        $('input#unhelpful').on('click', function(e) {
+        $('#unhelpful').on('click', function(e) {
             e.preventDefault()
             $.getJSON('/decrease',
                 function(data) {
@@ -22,6 +21,24 @@
             return false;
         });
     });
+
+    function like(){
+      document.getElementById("helpful").innerHTML = "<span class='material-icons'> thumb_up</span>";
+      document.getElementById("unhelpful").innerHTML = "<span class='material-icons'> thumb_down_off_alt</span>";
+    }
+
+    function unlike(){
+      document.getElementById("unhelpful").innerHTML = "<span class='material-icons'> thumb_down</span>";
+      document.getElementById("helpful").innerHTML = "<span class='material-icons'> thumb_up_off_alt</span>";
+    }
+    
+    function updateMin(min){
+      document.querySelector("#price-min").value = min
+    }
+
+    function updateMax(max){
+      document.querySelector("#price-max").value = max
+    }
 </script>
 
 <head>
@@ -53,10 +70,10 @@
           <form>
             <!-- <input type="image" id="helpful" src="../static/thumbs_up.png" alt="helpful" height="20">
             <input type="image" id="unhelpful" src="../static/thumbs_down.png" alt="unhelpful" height="20"> -->
-            <span class="material-icons" id="unhelpful">
-              thumb_up{{ '_off_alt'if True}}
+            <span onclick="like()" class="material-icons" id="helpful">
+              thumb_up_off_alt
             </span>
-            <span class="material-icons" id="helpful">
+            <span onclick="unlike()" class="material-icons" id="unhelpful">
               thumb_down{{ '_off_alt'if True}}
             </span>
           </form>
@@ -131,13 +148,13 @@
               $ <input id="price-max" type="number" name="price-max" placeholder="1000" value="{{ price_max }}">
 
               <!-- <div class="slider">
-                <input type="range" min="0" max="1000" value="{{ price_min }}" id="lower">
-                <input type="range" min="0" max="1000" value="{{ price_max }}" id="upper">
+                <input type="range" min="0" max="1000" value="{{ price_min }}" id="lower" oninput="updateMin(value)">
+                <input type="range" min="0" max="1000" value="{{ price_max }}" id="upper" oninput="updateMax(value)">
               </div> -->
             </div>
           </div>
 
-          <button type="submit" class="btn btn-info"> Search </button>
+          <button type=" submit" class="btn btn-info"> Search </button>
 
         </form>
       </div>
