@@ -482,7 +482,7 @@
                      "roughness": 1.0,
                      "winter": 1.0,
                      "cold": 1.0,
-                     "acne": 1.0,
+                     "acne": 3.0,
                      "pimple": 1.0,
                      "pimples": 1.0,
                      "breakout": 1.0,
@@ -534,7 +534,7 @@
        },
        "BHA exfoliants are great for oily skin, as these types of acids penetrate into the pores, cleaning up excess oil, sebum, and debris.": {
               "terms": {
-                     "acne": 1.0,
+                     "acne": 4.5,
                      "oil": 1.0,
                      "oily": 1.0,
                      "oiliness": 1.0,
@@ -626,7 +626,7 @@
                      "antibacterial": 1.0,
                      "infected": 1.0,
                      "infection": 1.0,
-                     "acne": 1.0,
+                     "acne": 5.0,
                      "pimple": 1.0,
                      "pimples": 1.0,
                      "breakout": 1.0,
@@ -639,7 +639,7 @@
        },
        "If your skin is excessively dry, it may try to compensate for the dryness by overproducing oil. The result? Breakouts.": {
               "terms": {
-                     "acne": 2.0,
+                     "acne": 9.5,
                      "pimple": 1.0,
                      "pimples": 1.0,
                      "breakout": 1.0,
@@ -661,7 +661,7 @@
        },
        "After sweating, immediately use an exfoliating cleanser to help keep your pores clear and remove excess oil.": {
               "terms": {
-                     "acne": 1.0,
+                     "acne": 8.0,
                      "pimple": 1.0,
                      "pimples": 1.0,
                      "breakout": 1.0,
@@ -689,7 +689,7 @@
        },
        "Unwashed sheets and pillowcases lead to cross-contamination which leads to pimples.": {
               "terms": {
-                     "acne": 1.0,
+                     "acne": 7.5,
                      "pimple": 1.0,
                      "pimples": 1.0,
                      "breakout": 1.0,

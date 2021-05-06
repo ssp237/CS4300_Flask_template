@@ -8,6 +8,7 @@
             $.getJSON('/increase',
                 function(data) {
                 });
+            $('span#helpful').innerHTML = "thumbs_up_alt_off";
             return false;
         });
     });
@@ -16,7 +17,6 @@
             e.preventDefault()
             $.getJSON('/decrease',
                 function(data) {
-                    //do nothing
                 });
             return false;
         });
@@ -70,12 +70,18 @@
           <form>
             <!-- <input type="image" id="helpful" src="../static/thumbs_up.png" alt="helpful" height="20">
             <input type="image" id="unhelpful" src="../static/thumbs_down.png" alt="unhelpful" height="20"> -->
-            <span onclick="like()" class="material-icons" id="helpful">
+            <<<<<<< HEAD <span onclick="like()" class="material-icons" id="helpful">
               thumb_up_off_alt
-            </span>
-            <span onclick="unlike()" class="material-icons" id="unhelpful">
-              thumb_down{{ '_off_alt'if True}}
-            </span>
+              </span>
+              <span onclick="unlike()" class="material-icons" id="unhelpful">
+                =======
+                <span class="material-icons" id="helpful">
+                  thumb_up{{ '_off_alt'if True}}
+                </span>
+                <span class="material-icons" id="unhelpful">
+                  >>>>>>> 654fa309094e60e7729883e7a7f644b846d037fb
+                  thumb_down{{ '_off_alt'if True}}
+                </span>
           </form>
         </div>
       </div>
