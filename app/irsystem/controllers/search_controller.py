@@ -352,17 +352,15 @@ def search():
 
     changed_mat = False
 
+    #Get Filter Values from frontend
     product = request.args.get('product-type')
     if product == 'all': product = None
     skin = request.args.get('skin-type')
     if skin == 'all': skin = None
-
-    price_min = 0
-    # int(request.args.get('price-min'))
-    if price_min < 0: price_min = 0
-    price_max = 1000
-    # int(request.args.get('price-max'))
-    if price_max > 1000: price_max = 1000
+    price_min = parse_for_int(request.args.get('price-min'), 0)
+    price_min = 0 if price_min < 0 else price_min
+    price_max = parse_for_int(request.args.get('price-max'), 1000)
+    price_max = 1000 if price_max > 1000 else price_max  
 
 
     sensitive = request.args.get('sensitivity')
@@ -408,6 +406,10 @@ def search():
                            query=query, product_types=product_types, product_type=product, 
                            price_min=price_min, price_max=price_max,
                            skin_type=skin, sensitive=sensitive)
+
+
+def parse_for_int(request, value_if_none):
+  return int(request if request else value_if_none)
 
 # @irsystem.route('/filter', methods=['POST'])
 # def filter():
