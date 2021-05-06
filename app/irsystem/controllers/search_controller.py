@@ -22,14 +22,14 @@ def adjust_sensitivity(ranking, sensitive, products_to_indices):
     """
     products = set(products_to_indices.keys())
     if sensitive:
-        scrubs = products.union(set(categories['abrasive/scrub']['products']))
-        perfuming = products.union(set(categories['perfuming']['products']))
+        scrubs = products.intersection(set(categories['abrasive/scrub']['products']))
+        perfuming = products.intersection(set(categories['perfuming']['products']))
         for prod in scrubs:
             ranking[products_to_indices[prod]] *= 0.25
         for prod in perfuming:
             ranking[products_to_indices[prod]] *= 0.25
         
-        soothing = products.union(set(categories['soothing']['products']))
+        soothing = products.intersection(set(categories['soothing']['products']))
         for prod in soothing:
             ranking[products_to_indices[prod]] *= 1.75
     return ranking
@@ -47,19 +47,19 @@ def adjust_skin_type(ranking, s_type, product_types, products_to_indices, catego
         
         ranking[product_types['Face Oils']] *= 0.1
         
-        absorbent = products.union(set(categories['absorbent/mattifier']['products']))
+        absorbent = products.intersection(set(categories['absorbent/mattifier']['products']))
         for prod in absorbent:
             ranking[products_to_indices[prod]] *= 1.5
         ranking[product_types['BHA Products']] *= 1.5
         ranking[product_types['Oil Absorbing Products']] *= 1.75
     
     elif s_type == 'dry':
-        absorbent = products.union(set(categories['absorbent/mattifier']['products']))
+        absorbent = products.intersection(set(categories['absorbent/mattifier']['products']))
         for prod in absorbent:
             ranking[products_to_indices[prod]] *= 0.1
         ranking[product_types['Oil Absorbing Products']] *= 0.1
         
-        soothing = products.union(set(categories['soothing']['products']))
+        soothing = products.intersection(set(categories['soothing']['products']))
         for prod in soothing:
             ranking[products_to_indices[prod]] *= 1.5
     
