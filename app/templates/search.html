@@ -3,21 +3,21 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type=text/javascript>
     $(function() {
-        $('input#helpful').on('click', function(e) {
+        $('span#helpful').on('click', function(e) {
             e.preventDefault()
             $.getJSON('/increase',
                 function(data) {
-                    //do nothing
                 });
+            $('span#helpful').innerHTML = "thumbs_up_alt_off";
             return false;
         });
     });
     $(function() {
-        $('input#unhelpful').on('click', function(e) {
+        $('span#unhelpful').on('click', function(e) {
             e.preventDefault()
             $.getJSON('/decrease',
                 function(data) {
-                    //do nothing
+                    {#$('span#helpful').ma#}
                 });
             return false;
         });
@@ -53,10 +53,10 @@
           <form>
             <!-- <input type="image" id="helpful" src="../static/thumbs_up.png" alt="helpful" height="20">
             <input type="image" id="unhelpful" src="../static/thumbs_down.png" alt="unhelpful" height="20"> -->
-            <span class="material-icons" id="unhelpful">
+            <span class="material-icons" id="helpful">
               thumb_up{{ '_off_alt'if True}}
             </span>
-            <span class="material-icons" id="helpful">
+            <span class="material-icons" id="unhelpful">
               thumb_down{{ '_off_alt'if True}}
             </span>
           </form>
