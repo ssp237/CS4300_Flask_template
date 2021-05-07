@@ -50,6 +50,12 @@
 
 <body>
   <div class="{{ 'results-page' if query else 'header' }}">
+    {% if not query %}
+    <div class="versions">
+      <a href="https://thepocketesthetician.herokuapp.com">Version 1</a>
+      <a href="https://pocket-esthetician.herokuapp.com">Version 2</a>
+    </div>
+    {% endif %}
     <div class="{{ 'info' if query else '' }}">
       <div class="title">
         <h1>
@@ -69,12 +75,12 @@
           <form>
             <!-- <input type="image" id="helpful" src="../static/thumbs_up.png" alt="helpful" height="20">
             <input type="image" id="unhelpful" src="../static/thumbs_down.png" alt="unhelpful" height="20"> -->
-              <span onclick="like()" class="material-icons" id="helpful">
-                  thumb_up_off_alt
-              </span>
-              <span onclick="unlike()" class="material-icons" id="unhelpful">
-                  thumb_down{{ '_off_alt'if True}}
-              </span>
+            <span onclick="like()" class="material-icons" id="helpful">
+              thumb_up_off_alt
+            </span>
+            <span onclick="unlike()" class="material-icons" id="unhelpful">
+              thumb_down{{ '_off_alt'if True}}
+            </span>
           </form>
         </div>
       </div>
