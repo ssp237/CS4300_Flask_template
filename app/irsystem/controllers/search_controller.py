@@ -176,6 +176,7 @@ def updateTip(query_string, mat, tip_ind, key_to_ind, inc):
     :param tip_ind: index of tip
     :param key_to_ind: keyword to index dictionary
     :param inc: If true, increase count. If false, decrease
+    :return: Modified array
     """
     count_vec = CountVectorizer(stop_words='english')
     query_list = count_vec.fit_transform([query_string]).toarray()
@@ -189,6 +190,8 @@ def updateTip(query_string, mat, tip_ind, key_to_ind, inc):
             col = np.zeros((mat.shape[0], 1))
             col[tip_ind] = max(diff, 0)
             mat = np.append(mat, col, axis=1)
+
+    return mat
 
 
 def concern_similarity(query, category_info, prod_to_idx, category_to_idx, product_types):
@@ -332,10 +335,10 @@ def inc_query():
     """
     Increase the weight of the current query in the last returned tip
     """
-    global changed_mat
+    global changed_mat, tips_arr
     if not query or changed_mat:
         return "data"
-    updateTip(query, tips_arr, tips_to_ind[tip], terms_to_ind, True)
+    tips_arr = updateTip(query, tips_arr, tips_to_ind[tip], terms_to_ind, True)
     numpyToDic(tips_arr, tips_to_ind, terms_to_ind, tips)
     with open(tip_file, "w") as file:
         json.dump(tips, file, indent=7)
@@ -348,10 +351,10 @@ def dec_query():
     """
     Decrease the weight of the current query in the last returned tip
     """
-    global changed_mat
+    global changed_mat, tips_arr
     if not query or changed_mat:
         return "nothing"
-    updateTip(query, tips_arr, tips_to_ind[tip], terms_to_ind, False)
+    tips_arr = updateTip(query, tips_arr, tips_to_ind[tip], terms_to_ind, False)
     numpyToDic(tips_arr, tips_to_ind, terms_to_ind, tips)
     with open(tip_file, "w") as file:
         json.dump(tips, file, indent=7)
